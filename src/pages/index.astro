@@ -1,0 +1,138 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/Container.astro";
+import { SITE, HOME, SOCIALS } from "@consts";
+import ArrowCard from "@components/ArrowCard.astro";
+import Link from "@components/Link.astro";
+import { getCollection } from "astro:content";
+import { dateRange } from "@lib/utils";
+// import type { CollectionEntry } from "astro:content";
+
+const blog = (await getCollection("blog"))
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
+
+const allwork = (await getCollection("work"))
+  .sort((a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf())
+  .slice(0,SITE.NUM_WORKS_ON_HOMEPAGE);
+
+const work = await Promise.all(
+  allwork.map(async (item) => {
+    const { Content } = await item.render();
+    return { ...item, Content };
+  })
+);
+---
+
+<Layout title={HOME.TITLE} description={HOME.DESCRIPTION}>
+  <Container>
+    <aside data-pagefind-ignore>
+      <div class="space-y-16">
+        <section class="animate">
+          <article class="space-y-4">
+            <span>
+              <p>
+                Namaste! I’m a senior at <Link href="https://dtu.ac.in/">Delhi Technological University</Link> studying electronics and economics, with a strong foundation in analog VLSI. I recently completed a summer internship with <Link href="https://www.ti.com/">Texas Instruments</Link> India, where I learned that coffee and circuit schematics make a surprisingly powerful combo.
+              </p>
+              <p>
+                Back at DTU, I’m the Vice Captain and Head of Electrical for <Link href="https://teamraftaar.in/">Team Raftaar</Link>, leading our tech squad to design and build hybrid recumbent bikes that aim to be faster than your average pizza delivery.
+              </p>
+            </span>
+            <span>
+              <p>
+                When I'm not knee-deep in circuits, you'll find me geeking out over Formula 1, dissecting movie plots, and exploring pop culture's quirkiest corners.
+              </p>
+              <p>
+                Let’s <Link href="https://www.linkedin.com/in/priyanshusinha7/">connect</Link>, if you think you can handle my hysterical jokes and puns.
+              </p>
+            </span>
+          </article>
+        </section>
+
+        <section class="animate space-y-6">
+          <div class="flex flex-wrap items-center justify-between gap-y-2">
+            <h2 class="font-semibold text-black dark:text-white">
+              Latest posts
+            </h2>
+            <Link href="/blog"> See all posts </Link>
+          </div>
+          <ul class="not-prose flex flex-col gap-4">
+            {
+              blog.map((post) => (
+                <li>
+                  <ArrowCard entry={post} />
+                </li>
+              ))
+            }
+          </ul>
+        </section>
+
+        <section class="animate space-y-6">
+          <div class="flex flex-wrap gap-y-2 items-center justify-between">
+            <h2 class="font-semibold text-black dark:text-white">
+              Work Experience
+            </h2>
+            <Link href="/about">
+              See all work
+            </Link>
+          </div>
+          <ul class="flex flex-col space-y-4">
+            {work.map(entry => (
+              <li>
+                <div class="text-sm opacity-85">
+                  {dateRange(entry.data.dateStart, entry.data.dateEnd)}
+                </div>
+                <div class="font-semibold text-black dark:text-white">
+                  {entry.data.company}
+                </div>
+                <div class="opacity-85">
+                  {entry.data.role}
+                </div>
+                <article>
+                  <entry.Content />
+                </article>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section class="animate space-y-4">
+          <h2 class="font-semibold text-black dark:text-white">
+            Let's Connect
+          </h2>
+          <article>
+            <p>
+              If you want to get in touch with me about something, see what I'm all about or just to say
+              hi, reach out on social media or send me an email.
+            </p>
+          </article>
+          <ul class="not-prose flex flex-wrap gap-2">
+            {
+              SOCIALS.map((SOCIAL) => (
+                <li class="flex gap-x-2 text-nowrap">
+                  <Link
+                    href={SOCIAL.HREF}
+                    external
+                    aria-label={`${SITE.TITLE} on ${SOCIAL.NAME}`}
+                  >
+                    {SOCIAL.NAME}
+                  </Link>
+                  {"/"}
+                </li>
+              ))
+            }
+            <li class="line-clamp-1">
+              <Link
+                href={`mailto:${SITE.EMAIL}`}
+                aria-label={`Email ${SITE.TITLE}`}
+              >
+                priyanshusinha.dtu[at]gmail[dot]com
+              </Link>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </aside>
+  </Container>
+</Layout>

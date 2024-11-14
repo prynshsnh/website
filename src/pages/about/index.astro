@@ -1,0 +1,84 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/Container.astro";
+import { dateRange } from "@lib/utils";
+import { ABOUT } from "@consts";
+
+const collection = (await getCollection("work"))
+  .sort((a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf());
+
+const work = await Promise.all(
+  collection.map(async (item) => {
+    const { Content } = await item.render();
+    return { ...item, Content };
+  })
+);
+
+const ed_collection = (await getCollection("education"))
+  .sort((a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf());
+
+const education = await Promise.all(
+  ed_collection.map(async (item) => {
+    const { Content } = await item.render();
+    return { ...item, Content };
+  })
+);
+---
+
+<Layout title={ABOUT.TITLE} description={ABOUT.DESCRIPTION}>
+  <Container>
+    <div class="space-y-16">
+    <div class="space-y-10">
+      <div class="animate text-xl font-semibold text-black dark:text-white">
+        Work
+      </div>
+      <ul class="flex flex-col space-y-4">
+        { 
+          work.map(entry => (
+            <li class="animate">
+              <div class="text-sm opacity-85">
+                {dateRange(entry.data.dateStart, entry.data.dateEnd)}
+              </div>
+              <div class="font-semibold text-black dark:text-white">
+                {entry.data.company}
+              </div>
+              <div class="opacity-85">
+                {entry.data.role}
+              </div>
+              <article>
+                <entry.Content />
+              </article>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="space-y-10">
+      <div class="animate text-xl font-semibold text-black dark:text-white">
+        Education
+      </div>
+      <ul class="flex flex-col space-y-4">
+        { 
+          education.map(entry => (
+            <li class="animate">
+              <div class="text-sm opacity-85">
+                {dateRange(entry.data.dateStart, entry.data.dateEnd)}
+              </div>
+              <div class="font-semibold text-black dark:text-white">
+                {entry.data.school}
+              </div>
+              <div class="opacity-85">
+                {entry.data.course}
+              </div>
+              <article>
+                <entry.Content />
+              </article>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+  </Container>
+</Layout>
