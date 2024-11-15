@@ -32,6 +32,7 @@ import Search from "astro-pagefind/components/Search";
 
 <script is:inline>
   const magnifyingGlass = document.getElementById("magnifying-glass");
+  const magnifyingGlassDrawer = document.getElementById("magnifying-glass-drawer");
   const backdrop = document.getElementById("backdrop");
 
   function openPagefind() {
@@ -53,6 +54,10 @@ import Search from "astro-pagefind/components/Search";
 
   // open pagefind
   magnifyingGlass?.addEventListener("click", () => {
+    openPagefind();
+  });
+
+  magnifyingGlassDrawer?.addEventListener("click", () => {
     openPagefind();
   });
 

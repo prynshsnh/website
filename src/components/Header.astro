@@ -1,8 +1,9 @@
 ---
 import Container from "@components/Container.astro";
-import Link from "@components/Link.astro";
 import { Image } from "astro:assets";
 import profilePicture from "../../public/photo.jpg";
+import Link from "@components/Link.astro";
+import { cn } from "@lib/utils"
 ---
 
 <header transition:persist>
@@ -27,15 +28,15 @@ import profilePicture from "../../public/photo.jpg";
               </div>
             </div>
             <div class="grid">
-              <h1 class="text-lg font-semibold">Priyanshu Sinha</h1>
-              <span class="-mt-2 text-sm md:text-base"
+              <h1 class="text-lg font-semibold text-black dark:text-white">Priyanshu Sinha</h1>
+              <span class="-mt-2 text-base font-medium"
                 >Analog Engineer &bull; New Delhi, India</span
               >
             </div>
           </div>
         </section>
       </a>
-      <nav class="hidden items-center gap-1 md:flex">
+      <nav class="hidden items-center gap-2 md:flex">
         <Link href="/blog">blog</Link>
         <span>
           {`/`}
@@ -44,145 +45,63 @@ import profilePicture from "../../public/photo.jpg";
         <span>
           {`/`}
         </span>
-        <button
-          id="magnifying-glass"
-          aria-label="Search"
-          class="flex items-center rounded border border-black/15 bg-neutral-100 px-2 py-1 text-xs transition-colors duration-300 ease-in-out hover:bg-black/5 hover:text-black focus-visible:bg-black/5 focus-visible:text-black dark:border-white/20 dark:bg-neutral-900 dark:hover:bg-white/5 dark:hover:text-white dark:focus-visible:bg-white/5 dark:focus-visible:text-white"
-        >
-          <svg
-            height="16"
-            stroke-linejoin="round"
-            viewBox="0 0 16 16"
-            width="16"
-            style="color: currentcolor;"
-            ><path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M3.5 7C3.5 5.067 5.067 3.5 7 3.5C8.933 3.5 10.5 5.067 10.5 7C10.5 7.88461 10.1718 8.69256 9.63058 9.30876L9.30876 9.63058C8.69256 10.1718 7.88461 10.5 7 10.5C5.067 10.5 3.5 8.933 3.5 7ZM9.96544 11.0261C9.13578 11.6382 8.11014 12 7 12C4.23858 12 2 9.76142 2 7C2 4.23858 4.23858 2 7 2C9.76142 2 12 4.23858 12 7C12 8.11014 11.6382 9.13578 11.0261 9.96544L14.0303 12.9697L14.5607 13.5L13.5 14.5607L12.9697 14.0303L9.96544 11.0261Z"
-              fill="currentColor"></path></svg
-          >
-          &nbsp;Search
+        <button id="magnifying-glass" aria-label={`Search blog posts and projects on Priyanshu Sinha's website`} class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
+          <svg class="size-full">
+            <use href="/ui.svg#search"></use>
+          </svg>
+        </button>
+        <button id="header-theme-button" aria-label={`Toggle light and dark theme`} class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
+          <svg class="size-full block dark:hidden">
+            <use href="/ui.svg#sun"></use>
+          </svg>
+          <svg class="size-full hidden dark:block">
+            <use href="/ui.svg#moon"></use>
+          </svg>
         </button>
       </nav>
-      <div class="md:hidden">
-        <button
-          class="menu-toggle relative z-30 -ml-1 flex h-8 w-8 items-center justify-center"
-          aria-label="Open Menu"
-          aria-expanded="false"
-          aria-controls="menu-items"
-        >
-          <span class="menu-toggle-icon relative h-px w-6 bg-current"></span>
-        </button>
-        <ul id="menu-items" class="menu flex gap-6 divide-y dark:divide-white/20">
-          <li class="py-1">
-            <a
-              class="text-lg hover:underline hover:decoration-1 hover:underline-offset-2 md:text-base"
-              href="/blog"
-            >
-              blog
-            </a>
-          </li>
-          <li class="py-1">
-            <a
-              class="text-lg hover:underline hover:decoration-1 hover:underline-offset-2 md:text-base"
-              href="/about"
-            >
-              about
-            </a>
-          </li>
-          <li class="pb-1 pt-4">
-            <button
-              id="magnifying-glass"
-              aria-label="Search"
-              class="flex items-center w-full rounded border border-black/15 bg-neutral-100 px-2 py-1 text-base transition-colors duration-300 ease-in-out hover:bg-black/5 hover:text-black focus-visible:bg-black/5 focus-visible:text-black dark:border-white/20 dark:bg-neutral-900 dark:hover:bg-white/5 dark:hover:text-white dark:focus-visible:bg-white/5 dark:focus-visible:text-white"
-            >
-              <svg
-                height="24"
-                stroke-linejoin="round"
-                viewBox="0 0 16 16"
-                width="24"
-                style="color: currentcolor;"
-                ><path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M3.5 7C3.5 5.067 5.067 3.5 7 3.5C8.933 3.5 10.5 5.067 10.5 7C10.5 7.88461 10.1718 8.69256 9.63058 9.30876L9.30876 9.63058C8.69256 10.1718 7.88461 10.5 7 10.5C5.067 10.5 3.5 8.933 3.5 7ZM9.96544 11.0261C9.13578 11.6382 8.11014 12 7 12C4.23858 12 2 9.76142 2 7C2 4.23858 4.23858 2 7 2C9.76142 2 12 4.23858 12 7C12 8.11014 11.6382 9.13578 11.0261 9.96544L14.0303 12.9697L14.5607 13.5L13.5 14.5607L12.9697 14.0303L9.96544 11.0261Z"
-                  fill="currentColor"></path></svg
-              >
-              &nbsp;Search
-            </button>
-          </li>
-        </ul>
-      </div>
+      <button id="header-drawer-button" aria-label={`Toggle drawer open and closed`} class={cn("flex md:hidden", "size-10 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
+        <svg id="drawer-open" class="size-full">
+          <use href="/ui.svg#menu"></use>
+        </svg>
+        <svg id="drawer-close" class="size-full">
+          <use href="/ui.svg#x"></use>
+        </svg>
+      </button>
     </div>
   </Container>
 </header>
 
 <style>
-  @media (max-width: 767px) {
-    .menu {
-      @apply invisible absolute right-0.5 top-5 z-20 max-w-64 flex-col gap-1 rounded-xl border dark:border-white/20 bg-white dark:bg-neutral-900 px-3 pb-3 pt-8 opacity-0;
-      width: 200px;
-    }
-    .menu.is-visible {
-      @apply visible opacity-100;
-      transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
-    }
-    .menu-toggle-icon {
-      transition: width 0.1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
-    }
-    .menu-toggle.is-active .menu-toggle-icon {
-      @apply w-0;
-      transition: width 0.1s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .menu-toggle-icon:before,
-    .menu-toggle-icon:after {
-      @apply absolute left-1/2 top-0 h-px w-6 origin-center -translate-x-1/2 bg-current;
-      content: "";
-      transition:
-        transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-        margin 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
-    }
-    .menu-toggle-icon:before {
-      @apply -mt-1.5;
-    }
-    .menu-toggle-icon:after {
-      @apply mt-1.5;
-    }
-    .menu-toggle.is-active .menu-toggle-icon:before,
-    .menu-toggle.is-active .menu-toggle-icon:after {
-      @apply mt-0;
-      transition:
-        margin 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.1s,
-        transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
-    }
-    .menu-toggle.is-active .menu-toggle-icon:before {
-      @apply rotate-45;
-    }
-    .menu-toggle.is-active .menu-toggle-icon:after {
-      @apply -rotate-45;
-    }
+  #header-drawer-button > #drawer-open {
+    @apply block;
+  }
+
+  #header-drawer-button > #drawer-close {
+    @apply hidden;
+  }
+
+  #header-drawer-button.open > #drawer-open {
+    @apply hidden;
+  }
+
+  #header-drawer-button.open > #drawer-close {
+    @apply block;
   }
 </style>
 
-<script>
-  function menuToggle() {
-    const menu = document.querySelector(".menu");
-    const menuToggleBtn = document.querySelector(".menu-toggle");
-    menuToggleBtn?.addEventListener("click", () => {
-      const isMenuExpanded =
-        menuToggleBtn.getAttribute("aria-expanded") === "true";
-      menuToggleBtn.classList.toggle("is-active");
-      menuToggleBtn.setAttribute(
-        "aria-expanded",
-        isMenuExpanded ? "false" : "true",
-      );
-      menuToggleBtn.setAttribute(
-        "aria-label",
-        isMenuExpanded ? "Open Menu" : "Close Menu",
-      );
-      menu?.classList.toggle("is-visible");
-    });
+<script is:inline>
+  function toggleDrawer() {
+    const drawer = document.getElementById("drawer");
+    const drawerButton = document.getElementById("header-drawer-button");
+    drawer?.classList.toggle("open");
+    drawerButton?.classList.toggle("open");
   }
-  menuToggle();
-  document.addEventListener("astro:after-swap", menuToggle);
+
+  function initializeDrawerButton() {
+    const drawerButton = document.getElementById("header-drawer-button");
+    drawerButton?.addEventListener("click", toggleDrawer);
+  }
+
+  document.addEventListener("astro:after-swap", initializeDrawerButton);
+  initializeDrawerButton();
 </script>

@@ -1,4 +1,4 @@
-import type { Metadata, Site, Socials } from "@types";
+import type { Metadata, Site, Socials, Links } from "@types";
 
 export const SITE: Site = {
   TITLE: "Priyanshu Sinha",
@@ -22,6 +22,21 @@ export const ABOUT: Metadata = {
   TITLE: "About",
   DESCRIPTION: "Where I have studied, worked and what I have done.",
 };
+
+export const LINKS: Links = [
+  { 
+    TEXT: "home", 
+    HREF: "/", 
+  },
+  { 
+    TEXT: "about", 
+    HREF: "/about", 
+  },
+  { 
+    TEXT: "blog", 
+    HREF: "/blog", 
+  }
+]
 
 export const SOCIALS: Socials = [
   {
