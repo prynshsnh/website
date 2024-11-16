@@ -9,8 +9,8 @@ export const SITE: Site = {
 };
 
 export const HOME: Metadata = {
-  TITLE: "Home",
-  DESCRIPTION: "Homepage of Priyanshu Sinha's personal website",
+  TITLE: "My corner of the web",
+  DESCRIPTION: "Priyanshu Sinha is a senior at DTU studying electronics and economics, analog VLSI enthusiast, Vice Captain of Team Raftaar, F1 fan, movie buff, and pop culture geek. Let's connect over circuits, cinema, and coffee!",
 };
 
 export const BLOG: Metadata = {
@@ -29,12 +29,12 @@ export const LINKS: Links = [
     HREF: "/", 
   },
   { 
-    TEXT: "about", 
-    HREF: "/about", 
-  },
-  { 
     TEXT: "blog", 
     HREF: "/blog", 
+  },
+  { 
+    TEXT: "about", 
+    HREF: "/about", 
   }
 ]
 
