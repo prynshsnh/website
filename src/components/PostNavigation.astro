@@ -2,17 +2,17 @@
 const { prevPost, nextPost } = Astro.props;
 ---
 
-<div class="grid grid-cols-2 gap-1.5 sm:gap-3">
+<div class="flex flex-row justify-between gap-1.5 sm:gap-3">
   {
     prevPost?.slug ? (
       <a
         href={`/blog/${prevPost?.slug}`}
-        class="group relative flex flex-nowrap rounded-full border border-black/15 px-4 py-3 pl-10 no-underline transition-colors duration-300 ease-in-out hover:bg-black/5 hover:text-black focus-visible:bg-black/5 focus-visible:text-black dark:border-white/20 dark:hover:bg-white/5 dark:hover:text-white dark:focus-visible:bg-white/5 dark:focus-visible:text-white"
+        class="group flex flex-nowrap items-center justify-center min-w-32 rounded-full border border-black/15 px-4 py-4 gap-2 no-underline transition-colors duration-300 ease-in-out bg-neutral-50 dark:bg-neutral-950/15 hover:bg-black/10 hover:text-black focus-visible:bg-black/5 focus-visible:text-black dark:border-white/20 dark:hover:bg-white/5 dark:hover:text-white dark:focus-visible:bg-white/5 dark:focus-visible:text-white"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
-          class="absolute left-2 top-1/2 size-5 -translate-y-1/2 fill-none stroke-current stroke-2"
+          class="size-5 fill-none stroke-current stroke-2"
         >
           <line
             x1="5"
@@ -26,7 +26,7 @@ const { prevPost, nextPost } = Astro.props;
             class="translate-x-1 transition-transform duration-300 ease-in-out group-hover:translate-x-0 group-focus-visible:translate-x-0"
           />
         </svg>
-        <div class="flex items-center text-sm">{prevPost?.data.title}</div>
+        <div class="flex items-center text-sm">Previous</div>
       </a>
     ) : (
       <div class="invisible" />
@@ -37,12 +37,12 @@ const { prevPost, nextPost } = Astro.props;
     nextPost?.slug ? (
       <a
         href={`/blog/${nextPost?.slug}`}
-        class="group relative flex flex-grow flex-row-reverse flex-nowrap rounded-full border border-black/15 px-4 py-4 pr-10 no-underline transition-colors duration-300 ease-in-out hover:bg-black/5 hover:text-black focus-visible:bg-black/5 focus-visible:text-black dark:border-white/20 dark:hover:bg-white/5 dark:hover:text-white dark:focus-visible:bg-white/5 dark:focus-visible:text-white"
+        class="group flex flex-row-reverse flex-nowrap items-center justify-center min-w-32 rounded-full border border-black/15 px-4 py-4 gap-2 no-underline transition-colors duration-300 ease-in-out bg-neutral-50 dark:bg-neutral-950/15 hover:bg-black/10 hover:text-black focus-visible:bg-black/5 focus-visible:text-black dark:border-white/20 dark:hover:bg-white/5 dark:hover:text-white dark:focus-visible:bg-white/5 dark:focus-visible:text-white"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
-          class="absolute right-2 top-1/2 size-5 -translate-y-1/2 fill-none stroke-current stroke-2"
+          class="size-5 fill-none stroke-current stroke-2"
         >
           <line
             x1="5"
@@ -56,7 +56,7 @@ const { prevPost, nextPost } = Astro.props;
             class="-translate-x-1 transition-transform duration-300 ease-in-out group-hover:translate-x-0 group-focus-visible:translate-x-0"
           />
         </svg>
-        <div class="flex items-center text-sm">{nextPost?.data.title}</div>
+        <div class="flex items-center text-sm">Next</div>
       </a>
     ) : (
       <div class="invisible" />
