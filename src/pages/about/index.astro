@@ -4,6 +4,11 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/Container.astro";
 import { dateRange } from "@lib/utils";
 import { ABOUT } from "@consts";
+import { Image } from "astro:assets";
+import grid1 from "../../../public/images/church.jpeg";
+import grid2 from "../../../public/images/mirror.jpeg";
+import grid3 from "../../../public/images/pilot.jpeg";
+import grid4 from "../../../public/images/cafe.jpeg";
 
 const collection = (await getCollection("work")).sort(
   (a, b) =>
@@ -34,9 +39,69 @@ const education = await Promise.all(
   <Container>
     <div class="space-y-16">
       <div class="space-y-10">
-        <div class="animate text-xl font-semibold text-black dark:text-white">
-          Work
+      <h1 class="animate text-xl font-semibold text-black dark:text-white">
+        About me
+      </h1>
+      <div class="animate grid grid-cols-2 gap-2 md:grid-cols-4">
+        <div>
+          <Image
+            src={grid1}
+            alt="gallery-photo"
+            title="Quirky, not sorry!"
+            width={250}
+            height={250}
+            quality="high"
+            loading="lazy"
+            draggable="true"
+            class="object-cover object-center w-full h-48 max-w-full rounded-xl"
+            />
         </div>
+        <div>
+          <Image
+            src={grid2}
+            alt="gallery-photo"
+            title="Quirky, not sorry!"
+            width={250}
+            height={250}
+            quality="high"
+            loading="lazy"
+            draggable="true"
+            class="object-cover object-center w-full h-48 max-w-full rounded-xl"
+            />
+        </div>
+        <div>
+          <Image
+            src={grid3}
+            alt="gallery-photo"
+            title="Quirky, not sorry!"
+            width={250}
+            height={250}
+            quality="high"
+            loading="lazy"
+            draggable="true"
+            class="object-cover object-center w-full h-48 max-w-full rounded-xl"
+            />
+        </div>
+        <div>
+          <Image
+            src={grid4}
+            alt="gallery-photo"
+            title="Quirky, not sorry!"
+            width={250}
+            height={250}
+            quality="high"
+            loading="lazy"
+            draggable="true"
+            class="object-cover object-center w-full h-48 max-w-full rounded-xl"
+            />
+        </div>
+        <p class="text-sm col-span-2 md:col-span-4">A picture says a thousand words, but these four say only three words.</p>
+      </div>
+    </div>
+      <div class="space-y-10">
+        <h2 class="animate text-xl font-semibold text-black dark:text-white">
+          Work
+        </h2>
         <ul class="flex flex-col space-y-4">
           {
             work.map((entry) => (
@@ -44,9 +109,9 @@ const education = await Promise.all(
                 <div class="text-sm opacity-85">
                   {dateRange(entry.data.dateStart, entry.data.dateEnd)}
                 </div>
-                <div class="font-semibold text-black dark:text-white">
+                <h3 class="font-semibold text-black dark:text-white">
                   {entry.data.company}
-                </div>
+                </h3>
                 <div class="opacity-85">{entry.data.role}</div>
                 <article>
                   <entry.Content />
@@ -57,9 +122,9 @@ const education = await Promise.all(
         </ul>
       </div>
       <div class="space-y-10">
-        <div class="animate text-xl font-semibold text-black dark:text-white">
+        <h2 class="animate text-xl font-semibold text-black dark:text-white">
           Education
-        </div>
+        </h2>
         <ul class="flex flex-col space-y-4">
           {
             education.map((entry) => (
@@ -67,9 +132,9 @@ const education = await Promise.all(
                 <div class="text-sm opacity-85">
                   {dateRange(entry.data.dateStart, entry.data.dateEnd)}
                 </div>
-                <div class="font-semibold text-black dark:text-white">
+                <h3 class="font-semibold text-black dark:text-white">
                   {entry.data.school}
-                </div>
+                </h3>
                 <div class="opacity-85">{entry.data.course}</div>
                 <article>
                   <entry.Content />
