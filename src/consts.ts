@@ -48,6 +48,10 @@ export const SOCIALS: Socials = [
     HREF: "https://www.linkedin.com/in/priyanshusinha7/",
   },
   {
+    NAME: "Google Scholar",
+    HREF: "https://scholar.google.com/citations?user=NjDqj8MAAAAJ&hl=en",
+  },
+  {
     NAME: "Pinterest",
     HREF: "https://www.pinterest.com/priyanshusinha7/",
   },
@@ -68,7 +72,7 @@ export const SOCIALS: Socials = [
     HREF: "https://mastodon.social/@priyanshusinha",
   },
   {
-    NAME: "CV",
+    NAME: "read.cv",
     HREF: "https://read.cv/priyanshusinha",
   },
   {
