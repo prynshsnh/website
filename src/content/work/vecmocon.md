@@ -5,4 +5,6 @@ dateStart: "06/01/2023"
 dateEnd: "07/27/2023"
 ---
 
-Voluptatem est quaerat voluptas praesentium ipsa dolorem dignissimos nulla ratione distinctio quae maiores eligendi nostrum? Quibusdam, debitis voluptatum, lorem ipsum dolor. Sit amet consectetur adipisicing elit. Iure illo neque tempora.
+- Conducted in-depth research on non-invasive EV performance monitoring using BMS data.
+- Collaborated with cross-functional teams to integrate smart IoT devices for real-time data collection and analysis.
+- Analyzed large datasets, identified trends, and proposed data-driven solutions to enhance EV health and efficiency.

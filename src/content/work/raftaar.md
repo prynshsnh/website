@@ -1,8 +1,10 @@
 ---
 company: "Team Raftaar DTU"
-role: "Vice-Captain & Head of Electrical Department"
+role: "Vice-Captain"
 dateStart: "12/1/2023"
 dateEnd: "Current"
 ---
 
-Sit amet consectetur adipisicing elit. Iure illo neque tempora, voluptatem est quaerat voluptas praesentium ipsa dolorem dignissimos nulla ratione distinctio quae maiores eligendi nostrum? Quibusdam, debitis voluptatum, lorem ipsum dolor.
+- Second prize winner at the 2024 ASME XRC: Autonomous Vehicle competition, competing globally.
+- First prize winner at the 2023 eHPVC competition organized by ASME competing against top 50+ colleges across India.
+- Designed and developed the electric drivetrain (with regenerative braking and dynamic torque) from scratch.
