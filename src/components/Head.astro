@@ -37,9 +37,9 @@ const { title, description, image = "/og.png" } = Astro.props;
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 
 <!-- Favicon -->
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
 <meta name="generator" content={Astro.generator} />
 
@@ -55,7 +55,7 @@ const { title, description, image = "/og.png" } = Astro.props;
 <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
-<meta property="og:site_name" content={title}>
+<meta property="og:site_name" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={new URL(image, Astro.url)} />
 
@@ -70,7 +70,12 @@ const { title, description, image = "/og.png" } = Astro.props;
 <link rel="sitemap" href="/sitemap-index.xml" />
 
 <!-- RSS Feed -->
-<link rel="alternate" type="application/rss+xml" title={title} href={`${Astro.site}rss.xml`}/>
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  title={title}
+  href={`${Astro.site}rss.xml`}
+/>
 
 <!-- PageFind -->
 <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
@@ -82,25 +87,14 @@ const { title, description, image = "/og.png" } = Astro.props;
 <script type="application/ld+json">
   {
     "@context": "https://schema.org/",
-    "@type": "Person",
+    "@type": "WebSite",
     "name": "Priyanshu Sinha",
     "url": "https://priyanshusinha.in/",
-    "image": "https://priyanshusinha.in/photo.jpg",
-    "jobTitle": "Analog Engineer",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Texas Instruments"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/in/priyanshusinha7/",
-      "https://twitter.com/PriyanshuSinhaX",
-      "https://scholar.google.com/citations?user=NjDqj8MAAAAJ&hl=en",
-      "https://github.com/prynshsnh",
-      "https://letterboxd.com/priyanshusinha/",
-      "https://www.pinterest.com/priyanshusinha7/",
-      "https://www.youtube.com/@PriyanshuSinhaYT",
-      "https://www.instagram.com/_priyanshusinha/"
-    ]
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://priyanshusinha.in/{search_term_string}",
+      "query-input": "required"
+    }
   }
 </script>
 
