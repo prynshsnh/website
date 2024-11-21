@@ -78,6 +78,32 @@ const { title, description, image = "/og.png" } = Astro.props;
 
 <ViewTransitions />
 
+<!-- Schema.org -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Person",
+    "name": "Priyanshu Sinha",
+    "url": "https://priyanshusinha.in/",
+    "image": "https://priyanshusinha.in/photo.jpg",
+    "jobTitle": "Analog Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Texas Instruments"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/priyanshusinha7/",
+      "https://twitter.com/PriyanshuSinhaX",
+      "https://scholar.google.com/citations?user=NjDqj8MAAAAJ&hl=en",
+      "https://github.com/prynshsnh",
+      "https://letterboxd.com/priyanshusinha/",
+      "https://www.pinterest.com/priyanshusinha7/",
+      "https://www.youtube.com/@PriyanshuSinhaYT",
+      "https://www.instagram.com/_priyanshusinha/"
+    ]
+  }
+</script>
+
 <script is:inline>
   function init() {
     preloadTheme();
