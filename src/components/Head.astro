@@ -99,6 +99,16 @@ const { title, description, image = "/og.png" } = Astro.props;
   }
 </script>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W5Y48TXDBB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-W5Y48TXDBB');
+</script>
+
 <script is:inline>
   function init() {
     preloadTheme();
