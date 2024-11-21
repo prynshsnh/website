@@ -7,6 +7,7 @@ import QuickLinks from "@components/QuickLinks.astro";
 import Link from "@components/Link.astro";
 import { getCollection } from "astro:content";
 import { dateRange } from "@lib/utils";
+import RecentUpdates from "@components/RecentUpdates.astro";
 
 const blog = (await getCollection("blog"))
   .filter((post) => !post.data.draft)
@@ -75,6 +76,11 @@ const work = await Promise.all(
         <section class="animate space-y-6">
           <h2 class="font-semibold text-black dark:text-white">Quick Links</h2>
           <QuickLinks />
+        </section>
+
+        <section class="animate space-y-6">
+          <h2 class="font-semibold text-black dark:text-white">Currently</h2>
+          <RecentUpdates />
         </section>
 
         <section class="animate space-y-6">

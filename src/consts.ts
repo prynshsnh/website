@@ -1,4 +1,4 @@
-import type { Metadata, Site, Socials, Links } from "@types";
+import type { Metadata, Site, Socials, Links, Updates } from "@types";
 
 export const SITE: Site = {
   TITLE: "Priyanshu Sinha",
@@ -80,3 +80,19 @@ export const SOCIALS: Socials = [
     HREF: "https://drive.google.com/file/d/1BUDhZRYuNUFqeU71aLdT_TYB478ZHAXA/view?usp=sharing",
   },
 ];
+
+
+export const UPDATES: Updates = [
+  { 
+    ACTION: "Reading",
+    TEXT: "Songs My Mother Taught Me by Marlon Brando",  
+  },
+  { 
+    ACTION: "Watching",
+    TEXT: "From on Prime Video",  
+  },
+  { 
+    ACTION: "Listening",
+    TEXT: "Childish Gambino, ZAYN, The Weeknd",
+  }
+]

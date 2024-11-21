@@ -20,3 +20,8 @@ export type Links = {
   TEXT: string
   HREF: string
 }[]
+
+export type Updates = {
+  ACTION: string
+  TEXT: string
+}[]
