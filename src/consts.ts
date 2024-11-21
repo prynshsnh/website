@@ -9,7 +9,7 @@ export const SITE: Site = {
 };
 
 export const HOME: Metadata = {
-  TITLE: "My corner of the web",
+  TITLE: "Priyanshu Sinha",
   DESCRIPTION: "Priyanshu Sinha is a senior at DTU studying electronics and economics, analog VLSI enthusiast, Vice Captain of Team Raftaar, F1 fan, movie buff, and pop culture geek.",
 };
 
