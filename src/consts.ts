@@ -60,6 +60,14 @@ export const SOCIALS: Socials = [
     HREF: "https://letterboxd.com/priyanshusinha/",
   },
   {
+    NAME: "Goodreads",
+    HREF: "https://www.goodreads.com/priyanshusinha",
+  },
+  {
+    NAME: "The StoryGraph",
+    HREF: "https://app.thestorygraph.com/profile/priyanshusinha",
+  },
+  {
     NAME: "Spotify",
     HREF: "https://open.spotify.com/user/4851xnqv7ijz5xj923m8ubp8r",
   },
