@@ -72,6 +72,10 @@ export const SOCIALS: Socials = [
     HREF: "https://open.spotify.com/user/4851xnqv7ijz5xj923m8ubp8r",
   },
   {
+    NAME: "YouTube",
+    HREF: "https://www.youtube.com/@PriyanshuSinhaYT",
+  },
+  {
     NAME: "GitHub",
     HREF: "https://github.com/prynshsnh",
   },
