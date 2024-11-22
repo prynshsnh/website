@@ -119,45 +119,37 @@ pre {
   @apply scale-90 transition-transform;
 }
 
-/* Söhne Font */
+/* Suisse Font */
 @layer base {
   @font-face {
-    font-family: 'Soehne';
+    font-family: 'Suisse';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(/fonts/test-soehne-regular.woff2) format('woff2');
+    src: url(/fonts/suisse/SuisseIntl-Regular.woff2) format('woff2');
   }
 
   @font-face {
-    font-family: 'Soehne';
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: url(/fonts/test-soehne-regular-italic.woff2) format('woff2');
-  }
-
-  @font-face {
-    font-family: 'Soehne';
+    font-family: 'Suisse';
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src: url(/fonts/test-soehne-medium.woff2) format('woff2');
+    src: url(/fonts/suisse/SuisseIntl-Medium.woff2) format('woff2');
   }
 
   @font-face {
-    font-family: 'Soehne';
+    font-family: 'Suisse';
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src: url(/fonts/test-soehne-semibold.woff2) format('woff2');
+    src: url(/fonts/suisse/SuisseIntl-SemiBold.woff2) format('woff2');
   }
 
   @font-face {
-    font-family: 'Soehne';
+    font-family: 'Suisse';
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url(/fonts/test-soehne-bold.woff2) format('woff2');
+    src: url(/fonts/suisse/SuisseIntl-Bold.woff2) format('woff2');
   }
 }
