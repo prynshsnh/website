@@ -63,10 +63,10 @@ const work = await Promise.all(
                 culture's quirkiest corners.
               </p>
               <p>
-                Let’s <Link
-                  external
-                  href="https://www.linkedin.com/in/priyanshusinha7/"
-                  >connect</Link
+                Let’s <a
+                  class="cursor-pointer"
+                  onclick="document.getElementById('socials').scrollIntoView({behavior: 'smooth'});"
+                  >connect</a
                 >, if you think you can handle my hysterical jokes and puns.
               </p>
             </span>
@@ -128,7 +128,7 @@ const work = await Promise.all(
           </ul>
         </section>
 
-        <section class="animate space-y-4">
+        <section class="animate space-y-4" id="socials">
           <h2 class="font-semibold text-black dark:text-white">
             Let's Connect
           </h2>
