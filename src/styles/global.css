@@ -21,7 +21,7 @@ body {
   @apply font-sans antialiased;
   @apply flex flex-col;
   @apply bg-white dark:bg-neutral-900;
-  @apply text-black/75 dark:text-white/75;
+  @apply text-neutral-700 dark:text-neutral-300;
 }
 
 header {
@@ -40,7 +40,7 @@ footer {
 
 article {
   @apply prose prose-neutral max-w-full dark:prose-invert prose-img:mx-auto prose-img:my-auto;
-  @apply prose-headings:font-semibold;
+  @apply prose-headings:font-title prose-headings:font-semibold;
   @apply prose-headings:text-black prose-headings:dark:text-white;
 }
 
@@ -54,6 +54,10 @@ article {
     @apply text-black dark:text-white;
     @apply decoration-black/50 dark:decoration-white/50;
   }
+}
+
+.heading {
+  @apply font-title font-semibold
 }
 
 .animate {
@@ -151,5 +155,13 @@ pre {
     font-weight: 700;
     font-display: swap;
     src: url(/fonts/suisse/SuisseIntl-Bold.woff2) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Tiempos';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(/fonts/tiempos/tiempos-headline-semibold.woff2) format('woff2');
   }
 }

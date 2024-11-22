@@ -8,6 +8,7 @@ export default {
       fontFamily: {
         sans: ["Suisse", ...defaultTheme.fontFamily.sans],
         mono: ["Geist Mono", ...defaultTheme.fontFamily.mono],
+        title: ["Tiempos", ...defaultTheme.fontFamily.serif]
       },
     },
   },
