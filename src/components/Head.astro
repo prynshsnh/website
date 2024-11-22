@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 import { ViewTransitions } from "astro:transitions";
-import SpeedInsights from '@vercel/speed-insights/astro';
+import Analytics from '@vercel/analytics/astro'
 
 import "@fontsource/geist-sans/100.css";
 import "@fontsource/geist-sans/200.css";
@@ -96,8 +96,8 @@ const { title, description, image = "/og.png" } = Astro.props;
   }
 </script>
 
-<!-- Vercel Speed Insights -->
-<SpeedInsights />
+<!-- Vercel Analytics -->
+<Analytics/>
 
 <script is:inline>
   function init() {
