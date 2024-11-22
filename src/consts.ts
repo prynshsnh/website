@@ -41,7 +41,7 @@ export const LINKS: Links = [
 export const SOCIALS: Socials = [
   {
     NAME: "X (formerly Twitter)",
-    HREF: "https://twitter.com/PriyanshuSinhaX",
+    HREF: "https://x.com/PriyanshuSinhaX",
   },
   {
     NAME: "LinkedIn",
