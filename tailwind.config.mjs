@@ -10,6 +10,15 @@ export default {
         mono: ["Geist Mono", ...defaultTheme.fontFamily.mono],
         title: ["Tiempos", ...defaultTheme.fontFamily.serif]
       },
+      colors: {
+        bgColor: '#f8f9fa',
+        bgColorDark: '#151718',
+        borderColor: '#e6e8eb',
+        borderColorDark: '#2b2f31',
+        headerDark: '#1a1d1e',
+        link: '#0081f1',
+        linkDark: '#369eff'
+      }
     },
   },
   plugins: [require("@tailwindcss/typography")],

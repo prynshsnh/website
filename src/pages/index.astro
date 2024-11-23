@@ -5,6 +5,7 @@ import { SITE, HOME, SOCIALS } from "@consts";
 import ArrowCard from "@components/ArrowCard.astro";
 import QuickLinks from "@components/QuickLinks.astro";
 import Link from "@components/Link.astro";
+import HeadLink from "@components/HeadLink.astro";
 import { getCollection } from "astro:content";
 import { dateRange } from "@lib/utils";
 import RecentUpdates from "@components/RecentUpdates.astro";
@@ -34,7 +35,7 @@ const work = await Promise.all(
   <Container>
     <aside data-pagefind-ignore>
       <div class="space-y-16">
-        <section class="animate">
+        <!-- <section class="animate">
           <article class="space-y-4">
             <span>
               <p>
@@ -72,24 +73,29 @@ const work = await Promise.all(
               </p>
             </span>
           </article>
-        </section>
+        </section> -->
 
         <section class="animate space-y-6">
-          <h2 class="heading text-lg text-black dark:text-white">Quick Links</h2>
+          <h2 class="heading text-xl text-black dark:text-white">Quick Links</h2>
           <QuickLinks />
         </section>
 
         <section class="animate space-y-6">
-          <h2 class="heading text-lg text-black dark:text-white">Currently</h2>
+          <div class="flex flex-wrap items-center justify-between gap-y-2">
+            <h2 class="heading text-xl text-black dark:text-white">
+              Currently
+            </h2>
+            <HeadLink href="/blog">See all lists</HeadLink>
+          </div>
           <RecentUpdates />
         </section>
 
         <section class="animate space-y-6">
           <div class="flex flex-wrap items-center justify-between gap-y-2">
-            <h2 class="heading text-lg text-black dark:text-white">
+            <h2 class="heading text-xl text-black dark:text-white">
               Latest posts
             </h2>
-            <Link href="/blog"> See all posts </Link>
+            <HeadLink href="/blog">See all posts</HeadLink>
           </div>
           <ul class="not-prose flex flex-col gap-4">
             {
@@ -104,10 +110,10 @@ const work = await Promise.all(
 
         <section class="animate space-y-6">
           <div class="flex flex-wrap items-center justify-between gap-y-2">
-            <h2 class="heading text-lg text-black dark:text-white">
+            <h2 class="heading text-xl text-black dark:text-white">
               Work Experience
             </h2>
-            <Link href="/about"> See all work </Link>
+            <HeadLink href="/about">See all work</HeadLink>
           </div>
           <ul class="flex flex-col space-y-4">
             {
@@ -130,7 +136,7 @@ const work = await Promise.all(
         </section>
 
         <section class="animate space-y-4" id="socials">
-          <h2 class="heading text-lg text-black dark:text-white">
+          <h2 class="heading text-xl text-black dark:text-white">
             Let's Connect
           </h2>
           <article>

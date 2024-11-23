@@ -18,16 +18,17 @@ body {
 }
 
 body {
-  @apply font-sans antialiased;
+  @apply font-sans text-lg antialiased;
   @apply flex flex-col;
-  @apply bg-white dark:bg-neutral-900;
+  @apply bg-bgColor dark:bg-bgColorDark;
   @apply text-neutral-700 dark:text-neutral-300;
 }
 
 header {
-  @apply fixed left-0 right-0 top-0 z-50 py-6;
-  @apply bg-white/75 dark:bg-neutral-900/75;
+  @apply fixed left-0 right-0 top-0 z-50 py-4;
+  @apply bg-white dark:bg-[#1a1d1e];
   @apply backdrop-blur-sm;
+  @apply border-b border-borderColor dark:border-borderColorDark
 }
 
 main {
@@ -35,11 +36,11 @@ main {
 }
 
 footer {
-  @apply py-6 text-sm;
+  @apply py-6 text-base;
 }
 
 article {
-  @apply prose prose-neutral max-w-full dark:prose-invert prose-img:mx-auto prose-img:my-auto;
+  @apply prose prose-lg prose-neutral max-w-full dark:prose-invert prose-img:mx-auto prose-img:my-auto;
   @apply prose-headings:font-title prose-headings:font-semibold;
   @apply prose-headings:text-black prose-headings:dark:text-white;
 }

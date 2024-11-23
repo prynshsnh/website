@@ -2,7 +2,6 @@
 import type { CollectionEntry } from "astro:content";
 import FormattedDate from "@components/FormattedDate.astro";
 
-
 type Props = {
   entry: CollectionEntry<"blog">;
 };
@@ -14,17 +13,17 @@ const { entry } = Astro.props as {
 
 <a
   href={`/${entry.collection}/${entry.slug}`}
-  class="not-prose group relative flex flex-nowrap rounded-xl border border-black/15 px-4 py-3 pr-10 transition-colors duration-300 ease-in-out hover:bg-black/5 hover:text-black focus-visible:bg-black/5 focus-visible:text-black dark:border-white/20 dark:hover:bg-white/5 dark:hover:text-white dark:focus-visible:bg-white/5 dark:focus-visible:text-white"
+  class="not-prose dark:bg-headerDark group relative flex flex-nowrap rounded-xl border border-borderColor bg-white px-4 py-3 pr-10 transition duration-300 ease-in-out hover:translate-x-1 dark:border-borderColorDark"
 >
   <div class="flex flex-1 flex-col truncate">
     <div class="font-semibold text-black dark:text-white">
       {entry.data.title}
+      <span class="text-base font-medium text-neutral-500 dark:text-neutral-400"
+        >/ <FormattedDate date={entry.data.date} /></span
+      >
     </div>
     <div>
       {entry.data.description}
-    </div>
-    <div class="text-sm mt-2">
-      <FormattedDate date={entry.data.date} />
     </div>
   </div>
   <svg
