@@ -18,7 +18,7 @@ body {
 }
 
 body {
-  @apply font-sans text-lg antialiased;
+  @apply font-sans md:text-lg antialiased;
   @apply flex flex-col;
   @apply bg-bgColor dark:bg-bgColorDark;
   @apply text-neutral-700 dark:text-neutral-300;
@@ -36,11 +36,11 @@ main {
 }
 
 footer {
-  @apply py-6 text-base;
+  @apply py-6 text-sm md:text-base;
 }
 
 article {
-  @apply prose prose-lg prose-neutral max-w-full dark:prose-invert prose-img:mx-auto prose-img:my-auto;
+  @apply prose prose-base md:prose-lg prose-neutral max-w-full dark:prose-invert prose-img:mx-auto prose-img:my-auto;
   @apply prose-headings:font-title prose-headings:font-semibold;
   @apply prose-headings:text-black prose-headings:dark:text-white;
 }
@@ -58,7 +58,7 @@ article {
 }
 
 .heading {
-  @apply font-title font-semibold
+  @apply font-title font-bold
 }
 
 .animate {
@@ -159,10 +159,10 @@ pre {
   }
 
   @font-face {
-    font-family: 'Tiempos';
+    font-family: 'American Grotesk';
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     font-display: swap;
-    src: url(/fonts/tiempos/tiempos-headline-semibold.woff2) format('woff2');
+    src: url(/fonts/american-grotesk/american-grotesk-bold.woff2) format('woff2');
   }
 }

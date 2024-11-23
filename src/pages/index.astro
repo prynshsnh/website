@@ -75,25 +75,19 @@ const work = await Promise.all(
           </article>
         </section> -->
 
+        <section class="animate">
+          <h2 class="font-title text-3xl md:text-4xl">Hello there 👋! Take a look at my digital garden. It's so me. Let's <button class="text-link dark:text-linkDark hover:underline" onclick="document.getElementById('socials').scrollIntoView({behavior: 'smooth'});">connect</button>.</h2>
+        </section>
+
         <section class="animate space-y-6">
-          <h2 class="heading text-xl text-black dark:text-white">Quick Links</h2>
+          <h2 class="heading text-xl md:text-2xl text-black dark:text-white">Quick Links</h2>
           <QuickLinks />
         </section>
 
         <section class="animate space-y-6">
           <div class="flex flex-wrap items-center justify-between gap-y-2">
-            <h2 class="heading text-xl text-black dark:text-white">
-              Currently
-            </h2>
-            <HeadLink href="/blog">See all lists</HeadLink>
-          </div>
-          <RecentUpdates />
-        </section>
-
-        <section class="animate space-y-6">
-          <div class="flex flex-wrap items-center justify-between gap-y-2">
-            <h2 class="heading text-xl text-black dark:text-white">
-              Latest posts
+            <h2 class="heading text-xl md:text-2xl text-black dark:text-white">
+              Latest Posts
             </h2>
             <HeadLink href="/blog">See all posts</HeadLink>
           </div>
@@ -110,7 +104,17 @@ const work = await Promise.all(
 
         <section class="animate space-y-6">
           <div class="flex flex-wrap items-center justify-between gap-y-2">
-            <h2 class="heading text-xl text-black dark:text-white">
+            <h2 class="heading text-xl md:text-2xl text-black dark:text-white">
+              Currently
+            </h2>
+            <HeadLink href="/blog">See all lists</HeadLink>
+          </div>
+          <RecentUpdates />
+        </section>
+
+        <section class="animate space-y-6">
+          <div class="flex flex-wrap items-center justify-between gap-y-2">
+            <h2 class="heading text-xl md:text-2xl text-black dark:text-white">
               Work Experience
             </h2>
             <HeadLink href="/about">See all work</HeadLink>
@@ -136,7 +140,7 @@ const work = await Promise.all(
         </section>
 
         <section class="animate space-y-4" id="socials">
-          <h2 class="heading text-xl text-black dark:text-white">
+          <h2 class="heading text-xl md:text-2xl text-black dark:text-white">
             Let's Connect
           </h2>
           <article>

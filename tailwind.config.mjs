@@ -8,7 +8,7 @@ export default {
       fontFamily: {
         sans: ["Suisse", ...defaultTheme.fontFamily.sans],
         mono: ["Geist Mono", ...defaultTheme.fontFamily.mono],
-        title: ["Tiempos", ...defaultTheme.fontFamily.serif]
+        title: ["American Grotesk", ...defaultTheme.fontFamily.serif]
       },
       colors: {
         bgColor: '#f8f9fa',
@@ -16,8 +16,8 @@ export default {
         borderColor: '#e6e8eb',
         borderColorDark: '#2b2f31',
         headerDark: '#1a1d1e',
-        link: '#0081f1',
-        linkDark: '#369eff'
+        link: '#006adc',
+        linkDark: '#52a9ff'
       }
     },
   },

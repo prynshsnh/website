@@ -13,18 +13,19 @@ const { entry } = Astro.props as {
 
 <a
   href={`/${entry.collection}/${entry.slug}`}
-  class="not-prose dark:bg-headerDark group relative flex flex-nowrap rounded-xl border border-borderColor bg-white px-4 py-3 pr-10 transition duration-300 ease-in-out hover:translate-x-1 dark:border-borderColorDark"
+  class="not-prose dark:bg-headerDark group relative flex flex-nowrap rounded-xl border border-borderColor bg-white px-4 py-3 pr-10 transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg dark:shadow-black dark:border-borderColorDark"
 >
   <div class="flex flex-1 flex-col truncate">
     <div class="font-semibold text-black dark:text-white">
       {entry.data.title}
       <span class="text-base font-medium text-neutral-500 dark:text-neutral-400"
-        >/ <FormattedDate date={entry.data.date} /></span
+        ></span
       >
     </div>
-    <div>
+    <div class="text-neutral-500">
       {entry.data.description}
     </div>
+    <div class="text-sm mt-2 text-neutral-500"><FormattedDate date={entry.data.date} /></div>
   </div>
   <svg
     xmlns="http://www.w3.org/2000/svg"
