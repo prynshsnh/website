@@ -3,106 +3,146 @@ import Container from "@components/Container.astro";
 import { Image } from "astro:assets";
 import profilePicture from "../../public/photo.jpg";
 import Link from "@components/Link.astro";
-import { cn } from "@lib/utils"
+import { cn } from "@lib/utils";
 ---
 
 <header transition:persist>
-  <Container>
-    <div class="flex flex-wrap items-center justify-between gap-y-2">
-      <a href="/">
-        <section>
-          <div class="flex">
-            <div class="group mr-2 flex items-center sm:mr-3">
-              <div
-                class="avatar relative inline-flex h-10 w-10 md:h-12 md:w-12 items-center justify-center overflow-hidden rounded-full"
-              >
-                <Image
-                  src={profilePicture}
-                  alt="Priyanshu Sinha"
-                  title="Sexiest man alive"
-                  width={250}
-                  height={250}
-                  quality="high"
-                  loading="eager"
-                  draggable="false"
-                />
-              </div>
-            </div>
-            <div class="grid">
-              <h1 class="text-base md:text-lg font-semibold text-black dark:text-white">Priyanshu Sinha</h1>
-              <span class="-mt-2 text-sm md:text-base font-medium text-black/60 dark:text-white/60"
-                >Analog Engineer / New Delhi, India</span
-              >
-            </div>
-          </div>
-        </section>
-      </a>
-      <nav class="hidden items-center gap-2 md:flex">
-        <Link href="/blog">blog</Link>
-        <span>
-          {`/`}
-        </span>
-        <Link href="/about">about</Link>
-        <span>
-          {`/`}
-        </span>
-        <button id="magnifying-glass" title="Find on this website" aria-label={`Search blog posts and projects on Priyanshu Sinha's website`} class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
-          <svg class="size-full">
-            <use href="/ui.svg#search"></use>
-          </svg>
-        </button>
-        <button id="header-theme-button" title="Toggle theme" aria-label={`Toggle light and dark theme`} class={cn("hidden md:flex", "size-9 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
-          <svg class="size-full block dark:hidden">
-            <use href="/ui.svg#sun"></use>
-          </svg>
-          <svg class="size-full hidden dark:block">
-            <use href="/ui.svg#moon"></use>
-          </svg>
-        </button>
-      </nav>
-      <button id="header-drawer-button" aria-label={`Toggle drawer open and closed`} class={cn("flex md:hidden", "size-10 rounded-full p-2 items-center justify-center", "bg-transparent hover:bg-black/5 dark:hover:bg-white/20", "stroke-current hover:stroke-black hover:dark:stroke-white", "border border-black/10 dark:border-white/25", "transition-colors duration-300 ease-in-out")}>
-        <svg id="drawer-open" class="size-full">
-          <use href="/ui.svg#menu"></use>
-        </svg>
-        <svg id="drawer-close" class="size-full">
-          <use href="/ui.svg#x"></use>
-        </svg>
-      </button>
-    </div>
-  </Container>
+	<Container>
+		<div class="flex flex-wrap items-center justify-between gap-y-2">
+			<a href="/">
+				<section>
+					<div class="flex">
+						<div class="group mr-2 flex items-center sm:mr-3">
+							<div
+								class="avatar relative inline-flex h-10 w-10 md:h-12 md:w-12 items-center justify-center overflow-hidden rounded-full"
+							>
+								<Image
+									src={profilePicture}
+									alt="Priyanshu Sinha"
+									title="Sexiest man alive"
+									width={250}
+									height={250}
+									quality="high"
+									loading="eager"
+									draggable="false"
+								/>
+							</div>
+						</div>
+						<div class="grid">
+							<h1
+								class="text-base md:text-lg font-semibold text-black dark:text-white"
+							>
+								Priyanshu Sinha
+							</h1>
+							<span
+								class="-mt-2 text-sm md:text-base font-medium text-black/60 dark:text-white/60"
+								>Analog Engineer / New Delhi, India</span
+							>
+						</div>
+					</div>
+				</section>
+			</a>
+			<nav class="hidden items-center gap-2 md:flex">
+				<Link href="/blog">blog</Link>
+				<span>
+					{`/`}
+				</span>
+				<Link href="/about">about</Link>
+				<span>
+					{`/`}
+				</span>
+				<button
+					id="magnifying-glass"
+					title="Find on this website"
+					aria-label={`Search blog posts and projects on Priyanshu Sinha's website`}
+					class={cn(
+						"hidden md:flex",
+						"size-9 rounded-full p-2 items-center justify-center",
+						"bg-transparent hover:bg-black/5 dark:hover:bg-white/20",
+						"stroke-current hover:stroke-black hover:dark:stroke-white",
+						"border border-black/10 dark:border-white/25",
+						"transition-colors duration-300 ease-in-out",
+					)}
+				>
+					<svg class="size-full">
+						<use href="/ui.svg#search"></use>
+					</svg>
+				</button>
+				<button
+					id="header-theme-button"
+					title="Toggle theme"
+					aria-label={`Toggle light and dark theme`}
+					class={cn(
+						"hidden md:flex",
+						"size-9 rounded-full p-2 items-center justify-center",
+						"bg-transparent hover:bg-black/5 dark:hover:bg-white/20",
+						"stroke-current hover:stroke-black hover:dark:stroke-white",
+						"border border-black/10 dark:border-white/25",
+						"transition-colors duration-300 ease-in-out",
+					)}
+				>
+					<svg class="size-full block dark:hidden">
+						<use href="/ui.svg#sun"></use>
+					</svg>
+					<svg class="size-full hidden dark:block">
+						<use href="/ui.svg#moon"></use>
+					</svg>
+				</button>
+			</nav>
+			<button
+				id="header-drawer-button"
+				aria-label={`Toggle drawer open and closed`}
+				class={cn(
+					"flex md:hidden",
+					"size-10 rounded-full p-2 items-center justify-center",
+					"bg-transparent hover:bg-black/5 dark:hover:bg-white/20",
+					"stroke-current hover:stroke-black hover:dark:stroke-white",
+					"border border-black/10 dark:border-white/25",
+					"transition-colors duration-300 ease-in-out",
+				)}
+			>
+				<svg id="drawer-open" class="size-full">
+					<use href="/ui.svg#menu"></use>
+				</svg>
+				<svg id="drawer-close" class="size-full">
+					<use href="/ui.svg#x"></use>
+				</svg>
+			</button>
+		</div>
+	</Container>
 </header>
 
 <style>
-  #header-drawer-button > #drawer-open {
-    @apply block;
-  }
+	#header-drawer-button > #drawer-open {
+		@apply block;
+	}
 
-  #header-drawer-button > #drawer-close {
-    @apply hidden;
-  }
+	#header-drawer-button > #drawer-close {
+		@apply hidden;
+	}
 
-  #header-drawer-button.open > #drawer-open {
-    @apply hidden;
-  }
+	#header-drawer-button.open > #drawer-open {
+		@apply hidden;
+	}
 
-  #header-drawer-button.open > #drawer-close {
-    @apply block;
-  }
+	#header-drawer-button.open > #drawer-close {
+		@apply block;
+	}
 </style>
 
 <script is:inline>
-  function toggleDrawer() {
-    const drawer = document.getElementById("drawer");
-    const drawerButton = document.getElementById("header-drawer-button");
-    drawer?.classList.toggle("open");
-    drawerButton?.classList.toggle("open");
-  }
+	function toggleDrawer() {
+		const drawer = document.getElementById("drawer");
+		const drawerButton = document.getElementById("header-drawer-button");
+		drawer?.classList.toggle("open");
+		drawerButton?.classList.toggle("open");
+	}
 
-  function initializeDrawerButton() {
-    const drawerButton = document.getElementById("header-drawer-button");
-    drawerButton?.addEventListener("click", toggleDrawer);
-  }
+	function initializeDrawerButton() {
+		const drawerButton = document.getElementById("header-drawer-button");
+		drawerButton?.addEventListener("click", toggleDrawer);
+	}
 
-  document.addEventListener("astro:after-swap", initializeDrawerButton);
-  initializeDrawerButton();
+	document.addEventListener("astro:after-swap", initializeDrawerButton);
+	initializeDrawerButton();
 </script>

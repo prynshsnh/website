@@ -12,176 +12,204 @@ import grid3 from "../../../public/images/pilot.jpeg";
 import grid4 from "../../../public/images/cafe.jpeg";
 
 const collection = (await getCollection("work")).sort(
-  (a, b) =>
-    new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf(),
+	(a, b) =>
+		new Date(b.data.dateStart).valueOf() -
+		new Date(a.data.dateStart).valueOf(),
 );
 
 const work = await Promise.all(
-  collection.map(async (item) => {
-    const { Content } = await item.render();
-    return { ...item, Content };
-  }),
+	collection.map(async (item) => {
+		const { Content } = await item.render();
+		return { ...item, Content };
+	}),
 );
 
 const ed_collection = (await getCollection("education")).sort(
-  (a, b) =>
-    new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf(),
+	(a, b) =>
+		new Date(b.data.dateStart).valueOf() -
+		new Date(a.data.dateStart).valueOf(),
 );
 
 const education = await Promise.all(
-  ed_collection.map(async (item) => {
-    const { Content } = await item.render();
-    return { ...item, Content };
-  }),
+	ed_collection.map(async (item) => {
+		const { Content } = await item.render();
+		return { ...item, Content };
+	}),
 );
 ---
 
-<Layout title={`Priyanshu Sinha • ${ABOUT.TITLE}`} description={ABOUT.DESCRIPTION}>
-  <Container>
-    <div class="space-y-16">
-      <div class="space-y-10">
-      <h1 class="animate text-xl md:text-2xl heading text-black dark:text-white">
-        About me
-      </h1>
-      <div class="animate grid grid-cols-2 gap-2 md:grid-cols-4">
-        <div>
-          <Image
-            src={grid1}
-            alt="gallery-photo"
-            title="Quirky, not sorry!"
-            width={250}
-            height={250}
-            quality="high"
-            loading="lazy"
-            draggable="true"
-            class="object-cover object-center w-full h-48 max-w-full rounded-xl"
-            />
-        </div>
-        <div>
-          <Image
-            src={grid2}
-            alt="gallery-photo"
-            title="Quirky, not sorry!"
-            width={250}
-            height={250}
-            quality="high"
-            loading="lazy"
-            draggable="true"
-            class="object-cover object-center w-full h-48 max-w-full rounded-xl"
-            />
-        </div>
-        <div>
-          <Image
-            src={grid3}
-            alt="gallery-photo"
-            title="Quirky, not sorry!"
-            width={250}
-            height={250}
-            quality="high"
-            loading="lazy"
-            draggable="true"
-            class="object-cover object-center w-full h-48 max-w-full rounded-xl"
-            />
-        </div>
-        <div>
-          <Image
-            src={grid4}
-            alt="gallery-photo"
-            title="Quirky, not sorry!"
-            width={250}
-            height={250}
-            quality="high"
-            loading="lazy"
-            draggable="true"
-            class="object-cover object-center w-full h-48 max-w-full rounded-xl"
-            />
-        </div>
-        <p class="text-sm col-span-2 md:col-span-4">A picture says a thousand words, but these four say only three words.</p>
-      </div>
-              <section class="animate">
-          <article class="space-y-4">
-            <span>
-              <p>
-                I’m a senior at <Link
-                  external
-                  href="https://dtu.ac.in/">Delhi Technological University</Link
-                > studying electronics and economics, with a strong foundation in
-                analog VLSI. I recently completed a summer internship with <Link
-                  external
-                  href="https://www.ti.com/">Texas Instruments</Link
-                > India, where I learned that coffee and circuit schematics make
-                a surprisingly powerful combo.
-              </p>
-              <p>
-                Back at DTU, I’m the Vice Captain and Head of Electrical for <Link
-                  external
-                  href="https://teamraftaar.in/">Team Raftaar</Link
-                >, leading our tech squad to design and build hybrid recumbent
-                bikes that aim to be faster than your average pizza delivery.
-              </p>
-            </span>
-            <span>
-              <p>
-                When I'm not knee-deep in circuits, you'll find me geeking out
-                over Formula 1, dissecting movie plots, and exploring pop
-                culture's quirkiest corners.
-              </p>
-              <p>
-                Let’s <Link
-                href="/#socials"
-                  >connect</Link
-                >, if you think you can handle my hysterical jokes and puns.
-              </p>
-            </span>
-          </article>
-        </section>
-    </div>
-      <div class="space-y-10">
-        <h2 class="animate text-xl md:text-2xl heading text-black dark:text-white">
-          Work
-        </h2>
-        <ul class="flex flex-col space-y-4">
-          {
-            work.map((entry) => (
-              <li class="animate">
-                <div class="text-sm opacity-85">
-                  {dateRange(entry.data.dateStart, entry.data.dateEnd)}
-                </div>
-                <h3 class="font-semibold text-black dark:text-white">
-                  {entry.data.company}
-                </h3>
-                <div class="opacity-85">{entry.data.role}</div>
-                <article>
-                  <entry.Content />
-                </article>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-      <div class="space-y-10">
-        <h2 class="animate text-xl md:text-2xl heading text-black dark:text-white">
-          Education
-        </h2>
-        <ul class="flex flex-col space-y-4">
-          {
-            education.map((entry) => (
-              <li class="animate">
-                <div class="text-sm opacity-85">
-                  {dateRange(entry.data.dateStart, entry.data.dateEnd)}
-                </div>
-                <h3 class="font-semibold text-black dark:text-white">
-                  {entry.data.school}
-                </h3>
-                <div class="opacity-85">{entry.data.course}</div>
-                <article>
-                  <entry.Content />
-                </article>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-    </div>
-  </Container>
+<Layout
+	title={`Priyanshu Sinha • ${ABOUT.TITLE}`}
+	description={ABOUT.DESCRIPTION}
+>
+	<Container>
+		<div class="space-y-16">
+			<div class="space-y-10">
+				<h1
+					class="animate text-xl md:text-2xl heading text-black dark:text-white"
+				>
+					About me
+				</h1>
+				<div class="animate grid grid-cols-2 gap-2 md:grid-cols-4">
+					<div>
+						<Image
+							src={grid1}
+							alt="gallery-photo"
+							title="Quirky, not sorry!"
+							width={250}
+							height={250}
+							quality="high"
+							loading="lazy"
+							draggable="true"
+							class="object-cover object-center w-full h-48 max-w-full rounded-xl"
+						/>
+					</div>
+					<div>
+						<Image
+							src={grid2}
+							alt="gallery-photo"
+							title="Quirky, not sorry!"
+							width={250}
+							height={250}
+							quality="high"
+							loading="lazy"
+							draggable="true"
+							class="object-cover object-center w-full h-48 max-w-full rounded-xl"
+						/>
+					</div>
+					<div>
+						<Image
+							src={grid3}
+							alt="gallery-photo"
+							title="Quirky, not sorry!"
+							width={250}
+							height={250}
+							quality="high"
+							loading="lazy"
+							draggable="true"
+							class="object-cover object-center w-full h-48 max-w-full rounded-xl"
+						/>
+					</div>
+					<div>
+						<Image
+							src={grid4}
+							alt="gallery-photo"
+							title="Quirky, not sorry!"
+							width={250}
+							height={250}
+							quality="high"
+							loading="lazy"
+							draggable="true"
+							class="object-cover object-center w-full h-48 max-w-full rounded-xl"
+						/>
+					</div>
+					<p class="text-sm col-span-2 md:col-span-4">
+						A picture says a thousand words, but these four say only
+						three words.
+					</p>
+				</div>
+				<section class="animate">
+					<article class="space-y-4">
+						<span>
+							<p>
+								I’m a senior at <Link
+									external
+									href="https://dtu.ac.in/"
+									>Delhi Technological University</Link
+								> studying electronics and economics, with a strong
+								foundation in analog VLSI. I recently completed a
+								summer internship with <Link
+									external
+									href="https://www.ti.com/"
+									>Texas Instruments</Link
+								> India, where I learned that coffee and circuit
+								schematics make a surprisingly powerful combo.
+							</p>
+							<p>
+								Back at DTU, I’m the Vice Captain and Head of
+								Electrical for <Link
+									external
+									href="https://teamraftaar.in/"
+									>Team Raftaar</Link
+								>, leading our tech squad to design and build
+								hybrid recumbent bikes that aim to be faster
+								than your average pizza delivery.
+							</p>
+						</span>
+						<span>
+							<p>
+								When I'm not knee-deep in circuits, you'll find
+								me geeking out over Formula 1, dissecting movie
+								plots, and exploring pop culture's quirkiest
+								corners.
+							</p>
+							<p>
+								Let’s <Link href="/#socials">connect</Link>, if
+								you think you can handle my hysterical jokes and
+								puns.
+							</p>
+						</span>
+					</article>
+				</section>
+			</div>
+			<div class="space-y-10">
+				<h2
+					class="animate text-xl md:text-2xl heading text-black dark:text-white"
+				>
+					Work
+				</h2>
+				<ul class="flex flex-col space-y-4">
+					{
+						work.map((entry) => (
+							<li class="animate">
+								<div class="text-sm opacity-85">
+									{dateRange(
+										entry.data.dateStart,
+										entry.data.dateEnd,
+									)}
+								</div>
+								<h3 class="font-semibold text-black dark:text-white">
+									{entry.data.company}
+								</h3>
+								<div class="opacity-85">{entry.data.role}</div>
+								<article>
+									<entry.Content />
+								</article>
+							</li>
+						))
+					}
+				</ul>
+			</div>
+			<div class="space-y-10">
+				<h2
+					class="animate text-xl md:text-2xl heading text-black dark:text-white"
+				>
+					Education
+				</h2>
+				<ul class="flex flex-col space-y-4">
+					{
+						education.map((entry) => (
+							<li class="animate">
+								<div class="text-sm opacity-85">
+									{dateRange(
+										entry.data.dateStart,
+										entry.data.dateEnd,
+									)}
+								</div>
+								<h3 class="font-semibold text-black dark:text-white">
+									{entry.data.school}
+								</h3>
+								<div class="opacity-85">
+									{entry.data.course}
+								</div>
+								<article>
+									<entry.Content />
+								</article>
+							</li>
+						))
+					}
+				</ul>
+			</div>
+		</div>
+	</Container>
 </Layout>

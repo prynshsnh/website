@@ -38,11 +38,11 @@ To change the website metadata, edit `src/consts.ts`.
 // src/consts.ts
 
 export const SITE: Site = {
-  NAME: "Astro Micro",
-  DESCRIPTION: "Astro Micro is an accessible theme for Astro.",
-  EMAIL: "trevortylerlee@gmail.com",
-  NUM_POSTS_ON_HOMEPAGE: 3,
-  NUM_PROJECTS_ON_HOMEPAGE: 3,
+	NAME: "Astro Micro",
+	DESCRIPTION: "Astro Micro is an accessible theme for Astro.",
+	EMAIL: "trevortylerlee@gmail.com",
+	NUM_POSTS_ON_HOMEPAGE: 3,
+	NUM_PROJECTS_ON_HOMEPAGE: 3,
 };
 ```
 
@@ -62,8 +62,8 @@ export const SITE: Site = {
 // src/consts.ts
 
 export const ABOUT: Metadata = {
-  TITLE: "About",
-  DESCRIPTION: "Astro Micro is a fork of Astro Nano.",
+	TITLE: "About",
+	DESCRIPTION: "Astro Micro is a fork of Astro Nano.",
 };
 ```
 
@@ -80,18 +80,18 @@ export const ABOUT: Metadata = {
 // src/consts.ts
 
 export const SOCIALS: Socials = [
-  {
-    NAME: "twitter-x",
-    HREF: "https://twitter.com/boogerbuttcheeks",
-  },
-  {
-    NAME: "github",
-    HREF: "https://github.com/trevortylerlee",
-  },
-  {
-    NAME: "linkedin",
-    HREF: "https://www.linkedin.com/in/trevortylerlee",
-  },
+	{
+		NAME: "twitter-x",
+		HREF: "https://twitter.com/boogerbuttcheeks",
+	},
+	{
+		NAME: "github",
+		HREF: "https://github.com/trevortylerlee",
+	},
+	{
+		NAME: "linkedin",
+		HREF: "https://www.linkedin.com/in/trevortylerlee",
+	},
 ];
 ```
 
@@ -123,41 +123,41 @@ Change the `site` option to the deployed site's URL.
 // astro.config.mjs
 
 export default defineConfig({
-  site: "https://astro-micro.vercel.app",
-  integrations: [tailwind(), sitemap(), mdx(), pagefind()],
-  markdown: {
-    shikiConfig: {
-      theme: "css-variables",
-    },
-  },
+	site: "https://astro-micro.vercel.app",
+	integrations: [tailwind(), sitemap(), mdx(), pagefind()],
+	markdown: {
+		shikiConfig: {
+			theme: "css-variables",
+		},
+	},
 });
 ```
 
 ## Set up Giscus
 
-Follow the steps at [giscus.app](https://giscus.app). Once you get your  custom Giscus script from that site, go to `Giscus.astro` and replace that script with your own.
+Follow the steps at [giscus.app](https://giscus.app). Once you get your custom Giscus script from that site, go to `Giscus.astro` and replace that script with your own.
 
 ```js
 // src/components/Giscus.astro
 
 <script
-  is:inline
-  src="https://giscus.app/client.js"
-  data-repo="trevortylerlee/astro-micro"
-  data-repo-id="R_kgDOL_6l9Q"
-  data-category="Announcements"
-  data-category-id="DIC_kwDOL_6l9c4Cfk55"
-  data-mapping="pathname"
-  data-strict="0"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-input-position="top"
-  data-theme="preferred_color_scheme"
-  data-lang="en"
-  data-loading="lazy"
-  crossorigin="anonymous"
-  async></script>
-
+	is:inline
+	src="https://giscus.app/client.js"
+	data-repo="trevortylerlee/astro-micro"
+	data-repo-id="R_kgDOL_6l9Q"
+	data-category="Announcements"
+	data-category-id="DIC_kwDOL_6l9c4Cfk55"
+	data-mapping="pathname"
+	data-strict="0"
+	data-reactions-enabled="1"
+	data-emit-metadata="0"
+	data-input-position="top"
+	data-theme="preferred_color_scheme"
+	data-lang="en"
+	data-loading="lazy"
+	crossorigin="anonymous"
+	async
+></script>
 ```
 
 To change the Giscus themes used, edit the `setGiscusTheme` function in `Head.astro`.
@@ -166,15 +166,15 @@ To change the Giscus themes used, edit the `setGiscusTheme` function in `Head.as
 // src/components/Head.astro
 
 const setGiscusTheme = () => {
-  const giscus = document.querySelector(".giscus-frame");
+	const giscus = document.querySelector(".giscus-frame");
 
-  const isDark = document.documentElement.classList.contains("dark");
+	const isDark = document.documentElement.classList.contains("dark");
 
-  if (giscus) {
-    const url = new URL(giscus.src);
-    // Change "dark" and "light" to other Giscus themes
-    url.searchParams.set("theme", isDark ? "dark" : "light");
-    giscus.src = url.toString();
-  }
+	if (giscus) {
+		const url = new URL(giscus.src);
+		// Change "dark" and "light" to other Giscus themes
+		url.searchParams.set("theme", isDark ? "dark" : "light");
+		giscus.src = url.toString();
+	}
 };
 ```

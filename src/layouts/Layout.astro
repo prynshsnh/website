@@ -7,8 +7,8 @@ import { SITE } from "@consts";
 import Drawer from "@components/Drawer.astro";
 
 type Props = {
-  title: string;
-  description: string;
+	title: string;
+	description: string;
 };
 
 const { title, description } = Astro.props;
@@ -16,16 +16,16 @@ const { title, description } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <Head title={`${title}`} description={description} />
-  </head>
-  <body>
-    <Header />
-    <Drawer />
-    <main>
-      <slot />
-    </main>
-    <Footer />
-    <PageFind />
-  </body>
+	<head>
+		<Head title={`${title}`} description={description} />
+	</head>
+	<body>
+		<Header />
+		<Drawer />
+		<main>
+			<slot />
+		</main>
+		<Footer />
+		<PageFind />
+	</body>
 </html>

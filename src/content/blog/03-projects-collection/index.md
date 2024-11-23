@@ -20,8 +20,8 @@ The `projects` collections is found in `src/content/projects`.
 
 In the above example, two project posts will be generated with the folder name representing the slug.
 
-- `https://example.com/projects/project-1`
-- `https://example.com/projects/project-2`
+-   `https://example.com/projects/project-1`
+-   `https://example.com/projects/project-2`
 
 ---
 

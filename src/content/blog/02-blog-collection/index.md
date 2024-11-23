@@ -20,8 +20,8 @@ The `blog` collection is found in `src/content/blog`.
 
 In the above example, two blog posts will be generated with the folder name representing the slug.
 
-- `https://example.com/blog/post-1`
-- `https://example.com/blog/post-2`
+-   `https://example.com/blog/post-1`
+-   `https://example.com/blog/post-2`
 
 ---
 
