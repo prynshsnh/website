@@ -2,12 +2,18 @@
 import Container from "@components/Container.astro";
 import { SITE } from "@consts";
 import BackToTop from "@components/BackToTop.astro";
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <footer class="animate">
 	<Container>
 		<div class="flex items-center justify-between">
+		<div class="flex gap-3">
 			<div>&copy; {new Date().getFullYear()} / {SITE.TITLE}</div>
+			<a href={`${canonicalURL}rss.xml`} class="hidden md:block underline hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out">RSS</a>
+			<a href={`${canonicalURL}sitemap-index.xml`} class="hidden md:block underline hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out">Sitemap</a>
+		</div>
 			<BackToTop />
 		</div>
 	</Container>
