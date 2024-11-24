@@ -7,7 +7,7 @@ const { prevPost, nextPost } = Astro.props;
 		prevPost?.slug ? (
 			<a
 				href={`/blog/${prevPost?.slug}`}
-				class="group flex flex-nowrap items-center justify-center min-w-32 rounded-full border border-black/15 px-4 py-4 gap-2 no-underline transition-colors duration-300 ease-in-out bg-neutral-50 dark:bg-neutral-950/15 hover:bg-black/10 hover:text-black focus-visible:bg-black/5 focus-visible:text-black dark:border-white/20 dark:hover:bg-white/5 dark:hover:text-white dark:focus-visible:bg-white/5 dark:focus-visible:text-white"
+				class="group min-w-32 flex flex-nowrap items-center justify-center rounded-full border border-black/15 px-4 py-2 gap-2 no-underline transition-colors duration-300 ease-in-out bg-white dark:bg-headerDark hover:bg-black/5 hover:text-black focus-visible:bg-black/5 focus-visible:text-black dark:border-white/15 dark:hover:bg-white/5 dark:hover:text-white dark:focus-visible:bg-white/5 dark:focus-visible:text-white"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +26,7 @@ const { prevPost, nextPost } = Astro.props;
 						class="translate-x-1 transition-transform duration-300 ease-in-out group-hover:translate-x-0 group-focus-visible:translate-x-0"
 					/>
 				</svg>
-				<div class="flex items-center text-sm">Previous</div>
+				<div>Previous</div>
 			</a>
 		) : (
 			<div class="invisible" />
@@ -37,7 +37,7 @@ const { prevPost, nextPost } = Astro.props;
 		nextPost?.slug ? (
 			<a
 				href={`/blog/${nextPost?.slug}`}
-				class="group flex flex-row-reverse flex-nowrap items-center justify-center min-w-32 rounded-full border border-black/15 px-4 py-4 gap-2 no-underline transition-colors duration-300 ease-in-out bg-neutral-50 dark:bg-neutral-950/15 hover:bg-black/10 hover:text-black focus-visible:bg-black/5 focus-visible:text-black dark:border-white/20 dark:hover:bg-white/5 dark:hover:text-white dark:focus-visible:bg-white/5 dark:focus-visible:text-white"
+				class="group min-w-32 flex flex-row-reverse flex-nowrap items-center justify-center rounded-full border border-black/15 px-4 py-2 gap-2 no-underline transition-colors duration-300 ease-in-out bg-white dark:bg-headerDark hover:bg-black/5 hover:text-black focus-visible:bg-black/5 focus-visible:text-black dark:border-white/15 dark:hover:bg-white/5 dark:hover:text-white dark:focus-visible:bg-white/5 dark:focus-visible:text-white"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +56,7 @@ const { prevPost, nextPost } = Astro.props;
 						class="-translate-x-1 transition-transform duration-300 ease-in-out group-hover:translate-x-0 group-focus-visible:translate-x-0"
 					/>
 				</svg>
-				<div class="flex items-center text-sm">Next</div>
+				<div>Next</div>
 			</a>
 		) : (
 			<div class="invisible" />
