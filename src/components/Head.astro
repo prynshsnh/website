@@ -243,3 +243,14 @@ const { title, description, image = "/og.png" } = Astro.props;
 	document.addEventListener("astro:after-swap", () => init());
 	preloadTheme();
 </script>
+
+<script>
+	import type { TransitionBeforeSwapEvent } from "astro:transitions/client";
+	document.addEventListener("astro:before-swap", (e) =>
+		[
+			...(
+				e as TransitionBeforeSwapEvent
+			).newDocument.head.querySelectorAll('link[as="font"]'),
+		].forEach((link) => link.remove()),
+	);
+</script>

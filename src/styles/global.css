@@ -27,7 +27,6 @@ body {
 header {
 	@apply fixed left-0 right-0 top-0 z-50 py-4;
 	@apply bg-white dark:bg-[#1a1d1e];
-	@apply backdrop-blur-sm;
 	@apply border-b border-borderColor dark:border-borderColorDark;
 }
 
@@ -41,7 +40,7 @@ footer {
 
 article {
 	@apply prose prose-base prose-neutral max-w-full dark:prose-invert md:prose-lg prose-img:mx-auto prose-img:my-auto;
-	@apply prose-headings:font-title prose-headings:font-semibold;
+	@apply prose-headings:font-serif prose-headings:font-semibold;
 	@apply prose-headings:text-black prose-headings:dark:text-white;
 }
 
@@ -58,7 +57,7 @@ article {
 }
 
 .heading {
-	@apply font-title font-bold;
+	@apply font-serif font-bold text-black dark:text-white;
 }
 
 .animate {
@@ -164,6 +163,24 @@ pre {
 		font-weight: 700;
 		font-display: swap;
 		src: url(/fonts/american-grotesk/american-grotesk-bold.woff2)
+			format("woff2");
+	}
+
+	@font-face {
+		font-family: "American Grotesk";
+		font-style: normal;
+		font-weight: 500;
+		font-display: swap;
+		src: url(/fonts/american-grotesk/american-grotesk-medium.woff2)
+			format("woff2");
+	}
+
+	@font-face {
+		font-family: "American Grotesk";
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url(/fonts/american-grotesk/american-grotesk-regular.woff2)
 			format("woff2");
 	}
 }

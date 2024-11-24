@@ -8,7 +8,7 @@ export default {
 			fontFamily: {
 				sans: ["Suisse", ...defaultTheme.fontFamily.sans],
 				mono: ["Geist Mono", ...defaultTheme.fontFamily.mono],
-				title: ["American Grotesk", ...defaultTheme.fontFamily.serif],
+				serif: ["American Grotesk", ...defaultTheme.fontFamily.serif],
 			},
 			colors: {
 				bgColor: "#f8f9fa",
