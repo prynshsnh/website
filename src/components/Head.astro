@@ -1,17 +1,6 @@
 ---
 import "../styles/global.css";
-import { ViewTransitions } from "astro:transitions";
 import Analytics from "@vercel/analytics/astro";
-
-import "@fontsource/geist-mono/100.css";
-import "@fontsource/geist-mono/200.css";
-import "@fontsource/geist-mono/300.css";
-import "@fontsource/geist-mono/400.css";
-import "@fontsource/geist-mono/500.css";
-import "@fontsource/geist-mono/600.css";
-import "@fontsource/geist-mono/700.css";
-import "@fontsource/geist-mono/800.css";
-import "@fontsource/geist-mono/900.css";
 
 interface Props {
 	title: string;
@@ -69,8 +58,6 @@ const { title, description, image = "/og.png" } = Astro.props;
 	title={title}
 	href={`${Astro.site}rss.xml`}
 />
-
-<!-- <ViewTransitions /> -->
 
 <!-- Schema.org -->
 <script type="application/ld+json">
