@@ -52,11 +52,11 @@ const { Content, headings } = await post.render();
 
 <Layout title={post.data.title} description={post.data.description}>
 	<Container>
-		<div class="animate">
+		<div>
 			<BackToPrevious href="/blog">Back to blog</BackToPrevious>
 		</div>
 		<div class="my-10 space-y-1">
-			<div class="animate flex items-center gap-1.5">
+			<div class="flex items-center gap-1.5">
 				<div class="font-base text-sm">
 					<FormattedDate date={post.data.date} />
 				</div>
@@ -66,18 +66,18 @@ const { Content, headings } = await post.render();
 				</div>
 			</div>
 			<h1
-				class="animate text-3xl md:text-4xl heading text-black dark:text-white pt-2"
+				class="text-3xl md:text-4xl heading text-black dark:text-white pt-2"
 			>
 				{post.data.title}
 			</h1>
 			<h2
-				class="animate text-lg font-medium text-neutral-500 dark:text-neutral-400"
+				class="text-lg font-medium text-neutral-500 dark:text-neutral-400"
 			>
 				{post.data.description}
 			</h2>
 		</div>
 		{headings.length > 0 && <TableOfContents headings={headings} />}
-		<article class="animate">
+		<article>
 			<Content />
 			<div class="mt-24">
 				<PostNavigation prevPost={prevPost} nextPost={nextPost} />

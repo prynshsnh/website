@@ -46,11 +46,11 @@ const education = await Promise.all(
 		<div class="space-y-16">
 			<div class="space-y-10">
 				<h1
-					class="animate text-xl md:text-2xl heading text-black dark:text-white"
+					class="text-xl md:text-2xl heading text-black dark:text-white"
 				>
 					About me
 				</h1>
-				<div class="animate grid grid-cols-2 gap-2 md:grid-cols-4">
+				<div class="grid grid-cols-2 gap-2 md:grid-cols-4">
 					<div>
 						<Image
 							src={grid1}
@@ -108,7 +108,7 @@ const education = await Promise.all(
 						three words.
 					</p>
 				</div>
-				<section class="animate">
+				<section>
 					<article class="space-y-4">
 						<span>
 							<p>
@@ -154,14 +154,14 @@ const education = await Promise.all(
 			</div>
 			<div class="space-y-10">
 				<h2
-					class="animate text-xl md:text-2xl heading text-black dark:text-white"
+					class="text-xl md:text-2xl heading text-black dark:text-white"
 				>
 					Work
 				</h2>
 				<ul class="flex flex-col space-y-4">
 					{
 						work.map((entry) => (
-							<li class="animate">
+							<li>
 								<div class="text-sm opacity-85">
 									{dateRange(
 										entry.data.dateStart,
@@ -182,14 +182,14 @@ const education = await Promise.all(
 			</div>
 			<div class="space-y-10">
 				<h2
-					class="animate text-xl md:text-2xl heading text-black dark:text-white"
+					class="text-xl md:text-2xl heading text-black dark:text-white"
 				>
 					Education
 				</h2>
 				<ul class="flex flex-col space-y-4">
 					{
 						education.map((entry) => (
-							<li class="animate">
+							<li>
 								<div class="text-sm opacity-85">
 									{dateRange(
 										entry.data.dateStart,
@@ -212,7 +212,7 @@ const education = await Promise.all(
 			</div>
 			<section class="space-y-10">
 				<h2
-					class="animate text-xl md:text-2xl heading text-black dark:text-white"
+					class="text-xl md:text-2xl heading text-black dark:text-white"
 				>
 					About this site
 				</h2>
@@ -242,7 +242,8 @@ const education = await Promise.all(
 							If you are curious, you can explore the code for
 							this website on my <Link
 								external
-								href="https://github.com/prynshsnh/website">GitHub</Link
+								href="https://github.com/prynshsnh/website"
+								>GitHub</Link
 							>.
 						</p>
 					</p>

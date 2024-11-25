@@ -74,7 +74,7 @@ const { title, description, image = "/og.png" } = Astro.props;
 <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
 <script is:inline src="/pagefind/pagefind-ui.js"></script>
 
-<ViewTransitions />
+<!-- <ViewTransitions /> -->
 
 <!-- Schema.org -->
 <script type="application/ld+json">
@@ -94,7 +94,6 @@ const { title, description, image = "/og.png" } = Astro.props;
 	function init() {
 		preloadTheme();
 		onScroll();
-		animate();
 		addCopyCodeButtons();
 
 		const backToTop = document.getElementById("back-to-top");
@@ -175,16 +174,6 @@ const { title, description, image = "/og.png" } = Astro.props;
 		document.addEventListener("astro:after-swap", initializeThemeButtons);
 		initializeThemeButtons();
 	};
-
-	function animate() {
-		const animateElements = document.querySelectorAll(".animate");
-
-		animateElements.forEach((element, index) => {
-			setTimeout(() => {
-				element.classList.add("show");
-			}, index * 100);
-		});
-	}
 
 	function onScroll() {
 		if (window.scrollY > 0) {

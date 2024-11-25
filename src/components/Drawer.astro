@@ -9,7 +9,9 @@ const subpath = pathname.match(/[^/]+/g);
 	id="drawer"
 	class="fixed inset-0 h-0 z-30 overflow-hidden border-b border-borderColor dark:border-borderColorDark flex flex-col items-center justify-end md:hidden bg-white/50 dark:bg-headerDark/50 backdrop-blur-lg transition-[height] duration-300 ease-in-out"
 >
-	<nav class="flex w-full px-16 py-5 justify-between flex-row space-x-3 border-b border-borderColor dark:border-borderColorDark">
+	<nav
+		class="flex w-full px-16 py-5 justify-between flex-row space-x-3 border-b border-borderColor dark:border-borderColorDark"
+	>
 		{
 			LINKS.map((LINK) => (
 				<a
