@@ -33,137 +33,129 @@ const work = await Promise.all(
 
 <Layout title={HOME.TITLE} description={HOME.DESCRIPTION}>
 	<Container>
-		<aside data-pagefind-ignore>
-			<div class="space-y-16">
-				<section class="space-y-3">
-					<h2 class="heading text-2xl md:text-3xl">Hey there! 👋</h2>
-					<p
-						class="font-serif md:leading-9 text-xl md:text-2xl text-black dark:text-white"
-					>
-						Welcome to my digital garden. I like to watch <a
-							href="/about"
-							class="text-link dark:text-linkDark hover:underline"
-							>films</a
-						>, follow F1, read <a
-							href="/about"
-							class="text-link dark:text-linkDark hover:underline"
-							>books</a
-						> and to occasionally write <a
-							href="/blog"
-							class="text-link dark:text-linkDark hover:underline"
-							>blogs</a
-						>. Let's <button
-							class="text-link dark:text-linkDark hover:underline"
-							onclick="document.getElementById('socials').scrollIntoView({behavior: 'smooth'});"
-							>connect</button
-						>.
+		<div class="space-y-16">
+			<section class="space-y-3">
+				<h2 class="heading text-2xl md:text-3xl">Hey there! 👋</h2>
+				<p
+					class="font-serif md:leading-9 text-xl md:text-2xl text-black dark:text-white"
+				>
+					Welcome to my digital garden. I like to watch <a
+						href="/about"
+						class="text-link dark:text-linkDark hover:underline"
+						>films</a
+					>, follow F1, read <a
+						href="/about"
+						class="text-link dark:text-linkDark hover:underline"
+						>books</a
+					> and to occasionally write <a
+						href="/blog"
+						class="text-link dark:text-linkDark hover:underline"
+						>blogs</a
+					>. Let's <button
+						class="text-link dark:text-linkDark hover:underline"
+						onclick="document.getElementById('socials').scrollIntoView({behavior: 'smooth'});"
+						>connect</button
+					>.
+				</p>
+			</section>
+
+			<section class="space-y-6">
+				<h2 class="heading text-xl md:text-2xl">Quick Links</h2>
+				<QuickLinks />
+			</section>
+
+			<section class="space-y-6">
+				<div
+					class="flex flex-wrap items-center justify-between gap-y-2"
+				>
+					<h2 class="heading text-xl md:text-2xl">Latest Posts</h2>
+					<HeadLink href="/blog">See all posts</HeadLink>
+				</div>
+				<ul class="not-prose flex flex-col gap-4">
+					{
+						blog.map((post) => (
+							<li>
+								<ArrowCard entry={post} />
+							</li>
+						))
+					}
+				</ul>
+			</section>
+
+			<section class="space-y-6">
+				<div
+					class="flex flex-wrap items-center justify-between gap-y-2"
+				>
+					<h2 class="heading text-xl md:text-2xl">Currently</h2>
+					<HeadLink href="/about">Know more</HeadLink>
+				</div>
+				<RecentUpdates />
+			</section>
+
+			<section class="space-y-6">
+				<div
+					class="flex flex-wrap items-center justify-between gap-y-2"
+				>
+					<h2 class="heading text-xl md:text-2xl">Work Experience</h2>
+					<HeadLink href="/about">See all work</HeadLink>
+				</div>
+				<ul class="flex flex-col space-y-4">
+					{
+						work.map((entry) => (
+							<li>
+								<div class="text-sm opacity-85">
+									{dateRange(
+										entry.data.dateStart,
+										entry.data.dateEnd,
+									)}
+								</div>
+								<div class="font-semibold">
+									{entry.data.company}
+								</div>
+								<div class="opacity-85">{entry.data.role}</div>
+								<article>
+									<entry.Content />
+								</article>
+							</li>
+						))
+					}
+				</ul>
+			</section>
+
+			<section class="space-y-4" id="socials">
+				<h2 class="heading text-xl md:text-2xl">Let's Connect</h2>
+				<article>
+					<p>
+						If you want to get in touch with me about something, see
+						what I'm all about or just to say hi, reach out on
+						social media or send me an email.
 					</p>
-				</section>
-
-				<section class="space-y-6">
-					<h2 class="heading text-xl md:text-2xl">Quick Links</h2>
-					<QuickLinks />
-				</section>
-
-				<section class="space-y-6">
-					<div
-						class="flex flex-wrap items-center justify-between gap-y-2"
-					>
-						<h2 class="heading text-xl md:text-2xl">
-							Latest Posts
-						</h2>
-						<HeadLink href="/blog">See all posts</HeadLink>
-					</div>
-					<ul class="not-prose flex flex-col gap-4">
-						{
-							blog.map((post) => (
-								<li>
-									<ArrowCard entry={post} />
-								</li>
-							))
-						}
-					</ul>
-				</section>
-
-				<section class="space-y-6">
-					<div
-						class="flex flex-wrap items-center justify-between gap-y-2"
-					>
-						<h2 class="heading text-xl md:text-2xl">Currently</h2>
-						<HeadLink href="/about">Know more</HeadLink>
-					</div>
-					<RecentUpdates />
-				</section>
-
-				<section class="space-y-6">
-					<div
-						class="flex flex-wrap items-center justify-between gap-y-2"
-					>
-						<h2 class="heading text-xl md:text-2xl">
-							Work Experience
-						</h2>
-						<HeadLink href="/about">See all work</HeadLink>
-					</div>
-					<ul class="flex flex-col space-y-4">
-						{
-							work.map((entry) => (
-								<li>
-									<div class="text-sm opacity-85">
-										{dateRange(
-											entry.data.dateStart,
-											entry.data.dateEnd,
-										)}
-									</div>
-									<div class="font-semibold">
-										{entry.data.company}
-									</div>
-									<div class="opacity-85">
-										{entry.data.role}
-									</div>
-									<article>
-										<entry.Content />
-									</article>
-								</li>
-							))
-						}
-					</ul>
-				</section>
-
-				<section class="space-y-4" id="socials">
-					<h2 class="heading text-xl md:text-2xl">Let's Connect</h2>
-					<article>
-						<p>
-							If you want to get in touch with me about something,
-							see what I'm all about or just to say hi, reach out
-							on social media or send me an email.
-						</p>
-					</article>
-					<ul class="not-prose flex flex-wrap gap-2">
-						{
-							SOCIALS.map((SOCIAL) => (
-								<li class="flex gap-x-2 text-nowrap">
-									<Link
-										href={SOCIAL.HREF}
-										external
-										aria-label={`${SITE.TITLE} on ${SOCIAL.NAME}`}
-									>
-										{SOCIAL.NAME}
-									</Link>
-									{"/"}
-								</li>
-							))
-						}
-						<li class="line-clamp-1">
-							<Link
-								href={`mailto:${SITE.EMAIL}`}
-								aria-label={`Email ${SITE.TITLE}`}
-							>
-								Email me
-							</Link>
-						</li>
-					</ul>
-				</section>
-			</div>
-		</aside>
+				</article>
+				<ul class="not-prose flex flex-wrap gap-2">
+					{
+						SOCIALS.map((SOCIAL) => (
+							<li class="flex gap-x-2 text-nowrap">
+								<Link
+									href={SOCIAL.HREF}
+									external
+									aria-label={`${SITE.TITLE} on ${SOCIAL.NAME}`}
+								>
+									{SOCIAL.NAME}
+								</Link>
+								{"/"}
+							</li>
+						))
+					}
+					<li class="line-clamp-1">
+						<Link
+							href={`mailto:${SITE.EMAIL}`}
+							aria-label={`Email ${SITE.TITLE}`}
+						>
+							Email me
+						</Link>
+					</li>
+				</ul>
+			</section>
+		</div>
 	</Container>
 </Layout>

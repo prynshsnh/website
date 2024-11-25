@@ -51,10 +51,12 @@ import { cn } from "@lib/utils";
 				<span>
 					{`/`}
 				</span>
-				<button
-					id="magnifying-glass"
-					title="Find on this website"
-					aria-label={`Search blog posts and projects on Priyanshu Sinha's website`}
+				<a
+					href="/rss.xml"
+					target="_blank"
+					rel="noopener"
+					title="RSS Feed"
+					aria-label="RSS Feed for Priyanshu Sinha"
 					class={cn(
 						"hidden md:flex",
 						"size-9 rounded-full p-2 items-center justify-center",
@@ -65,9 +67,9 @@ import { cn } from "@lib/utils";
 					)}
 				>
 					<svg class="size-full">
-						<use href="/ui.svg#search"></use>
+						<use href="/ui.svg#rss"></use>
 					</svg>
-				</button>
+				</a>
 				<button
 					id="header-theme-button"
 					title="Toggle theme"
