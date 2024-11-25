@@ -6,11 +6,10 @@ export default {
 	content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 	theme: {
 		extend: {
-			// fontFamily: {
-			// 	sans: ["Suisse", ...defaultTheme.fontFamily.sans],
-			// 	mono: ["Geist Mono", ...defaultTheme.fontFamily.mono],
-			// 	serif: ["American Grotesk", ...defaultTheme.fontFamily.serif],
-			// },
+			fontFamily: {
+				sans: ["Suisse", ...defaultTheme.fontFamily.sans],
+				serif: ["American Grotesk", ...defaultTheme.fontFamily.serif],
+			},
 			colors: {
 				bgColor: "#f8f9fa",
 				bgColorDark: "#151718",

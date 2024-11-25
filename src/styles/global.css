@@ -123,7 +123,7 @@ pre {
 }
 
 /* Suisse Font */
-/* @layer base {
+@layer base {
 	@font-face {
 		font-family: "Suisse";
 		font-style: normal;
@@ -182,4 +182,4 @@ pre {
 		src: url(/fonts/american-grotesk/american-grotesk-regular.woff2)
 			format("woff2");
 	}
-} */
+}
