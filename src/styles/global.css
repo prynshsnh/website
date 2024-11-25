@@ -60,6 +60,14 @@ article {
 	@apply font-serif font-bold text-black dark:text-white;
 }
 
+.quick-card {
+	@apply rounded-xl p-4 transition ease-in-out border hover:-translate-y-1 duration-300 hover:shadow-lg dark:shadow-black
+}
+
+.quick-card-text {
+	@apply text-sm md:text-base text-neutral-700 dark:text-neutral-200 md:leading-snug
+}
+
 html #back-to-top {
 	@apply pointer-events-none opacity-0;
 }
@@ -115,7 +123,7 @@ pre {
 }
 
 /* Suisse Font */
-@layer base {
+/* @layer base {
 	@font-face {
 		font-family: "Suisse";
 		font-style: normal;
@@ -174,4 +182,4 @@ pre {
 		src: url(/fonts/american-grotesk/american-grotesk-regular.woff2)
 			format("woff2");
 	}
-}
+} */
