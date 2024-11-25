@@ -65,7 +65,7 @@ article {
 }
 
 .quick-card-text {
-	@apply text-sm md:text-base text-neutral-700 dark:text-neutral-200 md:leading-snug
+	@apply text-sm md:text-base text-neutral-700 dark:text-neutral-200
 }
 
 html #back-to-top {
