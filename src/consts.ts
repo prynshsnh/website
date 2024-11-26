@@ -102,7 +102,7 @@ export const UPDATES: Updates = [
 	},
 	{
 		ACTION: "Watching",
-		TEXT: "From on Prime Video",
+		TEXT: "Dune: Prophecy on JioCinema",
 	},
 	{
 		ACTION: "Listening",
