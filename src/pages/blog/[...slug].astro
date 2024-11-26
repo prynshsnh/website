@@ -57,18 +57,20 @@ const { Content, headings } = await post.render();
 			<BackToPrevious href="/blog">Back to blog</BackToPrevious>
 		</div>
 		<div class="my-6 space-y-1">
-		<div class="flex justify-between gap-y-4">
-			<div class="flex flex-col md:flex-row gap-1 md:gap-1.5 text-sm md:text-base">
-				<div class="font-medium">
-					<FormattedDate date={post.data.date} />
+			<div class="flex justify-between gap-y-4">
+				<div
+					class="flex flex-col md:flex-row gap-1 md:gap-1.5 text-sm md:text-base"
+				>
+					<div class="font-medium">
+						<FormattedDate date={post.data.date} />
+					</div>
+					<span class="hidden md:block">/</span>
+					<div>
+						{readingTime(post.body)}
+					</div>
 				</div>
-				<span class="hidden md:block">/</span>
-				<div>
-					{readingTime(post.body)}
-				</div>
+				<ShareLinks slug={post.slug} title={post.data.title} />
 			</div>
-			<ShareLinks slug={post.slug} title={post.data.title} />
-		</div>
 			<h1
 				class="text-3xl md:text-4xl heading text-black dark:text-white pt-4"
 			>
