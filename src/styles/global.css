@@ -68,6 +68,10 @@ article {
 	@apply text-sm text-neutral-700 dark:text-neutral-200 md:text-base;
 }
 
+.share-link {
+	@apply hover:text-black dark:hover:text-white transition-colors ease-in-out duration-300
+}
+
 html #back-to-top {
 	@apply pointer-events-none opacity-0;
 }
