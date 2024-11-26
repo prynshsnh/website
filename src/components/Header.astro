@@ -66,8 +66,16 @@ import { cn } from "@lib/utils";
 						"transition-colors duration-300 ease-in-out",
 					)}
 				>
-					<svg class="size-full">
-						<use href="/ui.svg#rss"></use>
+					<svg
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="1.5"
+					>
+						<path d="M4 11a9 9 0 019 9"></path>
+						<path d="M4 4a16 16 0 0116 16"></path>
+						<circle cx="5" cy="19" r="1"></circle>
 					</svg>
 				</a>
 				<button
@@ -83,11 +91,35 @@ import { cn } from "@lib/utils";
 						"transition-colors duration-300 ease-in-out",
 					)}
 				>
-					<svg class="size-full block dark:hidden">
-						<use href="/ui.svg#sun"></use>
+					<svg
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="1.5"
+						class="block dark:hidden"
+					>
+						<circle cx="12" cy="12" r="5"></circle>
+						<path d="M12 1v2"></path>
+						<path d="M12 21v2"></path>
+						<path d="M4.22 4.22l1.42 1.42"></path>
+						<path d="M18.36 18.36l1.42 1.42"></path>
+						<path d="M1 12h2"></path>
+						<path d="M21 12h2"></path>
+						<path d="M4.22 19.78l1.42-1.42"></path>
+						<path d="M18.36 5.64l1.42-1.42"></path>
 					</svg>
-					<svg class="size-full hidden dark:block">
-						<use href="/ui.svg#moon"></use>
+
+					<svg
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="1.5"
+						class="hidden dark:block"
+					>
+						<path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"
+						></path>
 					</svg>
 				</button>
 			</nav>
@@ -103,11 +135,30 @@ import { cn } from "@lib/utils";
 					"transition-colors duration-300 ease-in-out",
 				)}
 			>
-				<svg id="drawer-open" class="size-full">
-					<use href="/ui.svg#menu"></use>
+				<svg
+					id="drawer-open"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="1.5"
+					class="hidden dark:block"
+				>
+					<path d="M3 12h18"></path>
+					<path d="M3 6h18"></path>
+					<path d="M3 18h18"></path>
 				</svg>
-				<svg id="drawer-close" class="size-full">
-					<use href="/ui.svg#x"></use>
+				<svg
+					id="drawer-close"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="1.5"
+					class="hidden dark:block"
+				>
+					<path d="M18 6L6 18"></path>
+					<path d="M6 6l12 12"></path>
 				</svg>
 			</button>
 		</div>
