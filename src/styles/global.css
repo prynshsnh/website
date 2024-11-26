@@ -61,11 +61,11 @@ article {
 }
 
 .quick-card {
-	@apply rounded-xl p-4 transition ease-in-out border hover:-translate-y-1 duration-300 hover:shadow-lg dark:shadow-black
+	@apply rounded-xl border p-4 transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg dark:shadow-black;
 }
 
 .quick-card-text {
-	@apply text-sm md:text-base text-neutral-700 dark:text-neutral-200
+	@apply text-sm text-neutral-700 dark:text-neutral-200 md:text-base;
 }
 
 html #back-to-top {
