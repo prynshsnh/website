@@ -2,8 +2,6 @@
 import Container from "@components/Container.astro";
 import { SITE } from "@consts";
 import BackToTop from "@components/BackToTop.astro";
-
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <footer>
@@ -12,12 +10,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 			<div class="flex gap-4">
 				<div>&copy; {new Date().getFullYear()} / {SITE.TITLE}</div>
 				<a
-					href={`${canonicalURL}rss.xml`}
+					href={`${Astro.site}rss.xml`}
 					class="hidden md:block underline hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out"
 					>RSS</a
 				>
 				<a
-					href={`${canonicalURL}sitemap-index.xml`}
+					href={`${Astro.site}sitemap-index.xml`}
 					class="hidden md:block underline hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out"
 					>Sitemap</a
 				>
