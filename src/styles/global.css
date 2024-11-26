@@ -26,7 +26,7 @@ body {
 
 header {
 	@apply fixed left-0 right-0 top-0 z-50 py-4;
-	@apply bg-white dark:bg-[#1a1d1e];
+	@apply bg-white dark:bg-headerDark;
 	@apply border-b border-borderColor dark:border-borderColorDark;
 }
 
