@@ -4,10 +4,8 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/Container.astro";
 import FormattedDate from "@components/FormattedDate.astro";
 import { readingTime } from "@lib/utils";
-import BackToPrevious from "@components/BackToPrevious.astro";
 import PostNavigation from "@components/PostNavigation.astro";
 import TableOfContents from "@components/TableOfContents.astro";
-import ShareLinks from "@components/ShareLinks.astro";
 
 export async function getStaticPaths() {
 	const posts = (await getCollection("blog"))
@@ -53,31 +51,23 @@ const { Content, headings } = await post.render();
 
 <Layout title={post.data.title} description={post.data.description}>
 	<Container>
-		<div>
-			<BackToPrevious href="/blog">Back to blog</BackToPrevious>
-		</div>
-		<div class="my-6 space-y-1">
-			<div class="flex justify-between gap-y-4">
+		<div class="space-y-1 mb-4">
 				<div
-					class="flex flex-col md:flex-row gap-1 md:gap-1.5 text-sm md:text-base"
+					class="flex gap-1.5 text-sm md:text-base"
 				>
-					<div class="font-medium">
 						<FormattedDate date={post.data.date} />
-					</div>
-					<span class="hidden md:block">/</span>
+					/
 					<div>
 						{readingTime(post.body)}
 					</div>
 				</div>
-				<ShareLinks slug={post.slug} title={post.data.title} />
-			</div>
 			<h1
 				class="text-3xl md:text-4xl heading text-black dark:text-white pt-4"
 			>
 				{post.data.title}
 			</h1>
 			<h2
-				class="text-lg font-medium text-neutral-600 dark:text-neutral-400"
+				class="text-lg font-medium text-zinc-600 dark:text-zinc-400"
 			>
 				{post.data.description}
 			</h2>

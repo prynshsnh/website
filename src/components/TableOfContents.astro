@@ -1,7 +1,5 @@
 ---
 import TableOfContentsHeading from "./TableOfContentsHeading.astro";
-
-// https://kld.dev/building-table-of-contents/
 const { headings } = Astro.props;
 const toc = buildToc(headings);
 
@@ -27,7 +25,7 @@ function buildToc(headings: Heading[]) {
 }
 ---
 
-<details open class="rounded-lg border border-black/15 dark:border-white/20">
+<details class="rounded-lg border border-black/15 dark:border-white/20">
 	<summary>Table of Contents</summary>
 	<nav class="">
 		<ul class="py-3">

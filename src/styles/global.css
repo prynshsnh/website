@@ -21,7 +21,7 @@ body {
 	@apply font-sans antialiased md:text-lg;
 	@apply flex flex-col;
 	@apply bg-bgColor dark:bg-bgColorDark;
-	@apply text-neutral-700 dark:text-neutral-300;
+	@apply text-zinc-700 dark:text-zinc-300;
 }
 
 header {
@@ -39,7 +39,7 @@ footer {
 }
 
 article {
-	@apply prose prose-base prose-neutral max-w-full dark:prose-invert md:prose-lg prose-img:mx-auto prose-img:my-auto;
+	@apply prose prose-base prose-zinc max-w-full dark:prose-invert md:prose-lg prose-img:mx-auto prose-img:my-auto;
 	@apply prose-headings:font-serif prose-headings:font-semibold;
 	@apply prose-headings:text-black prose-headings:dark:text-white;
 }
@@ -65,7 +65,7 @@ article {
 }
 
 .quick-card-text {
-	@apply text-sm text-neutral-700 dark:text-neutral-200 md:text-base;
+	@apply text-sm text-zinc-700 dark:text-zinc-200 md:text-base;
 }
 
 .share-link {
@@ -115,7 +115,7 @@ pre {
 
 /* copy code button on codeblocks */
 .copy-code {
-	@apply absolute right-3 top-3 grid place-content-center rounded border border-black/15 bg-white px-1 text-center duration-300 ease-in-out dark:border-white/20 dark:bg-neutral-900;
+	@apply absolute right-3 top-3 grid place-content-center rounded border border-black/15 bg-white px-1 text-center duration-300 ease-in-out dark:border-white/20 dark:bg-zinc-900;
 }
 
 .copy-code:hover {
