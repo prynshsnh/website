@@ -39,7 +39,7 @@ footer {
 }
 
 article {
-	@apply prose prose-base prose-zinc max-w-full dark:prose-invert md:prose-lg prose-img:mx-auto prose-img:my-auto;
+	@apply prose prose-zinc max-w-full dark:prose-invert prose-img:mx-auto prose-img:my-auto;
 	@apply prose-headings:font-serif prose-headings:font-semibold;
 	@apply prose-headings:text-black prose-headings:dark:text-white;
 }
@@ -52,7 +52,7 @@ article {
 	}
 	article a:hover {
 		@apply text-black dark:text-white;
-		@apply decoration-black/50 dark:decoration-white/50;
+		@apply decoration-link dark:decoration-linkDark;
 	}
 }
 
