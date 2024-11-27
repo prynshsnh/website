@@ -39,7 +39,7 @@ footer {
 }
 
 article {
-	@apply prose prose-zinc max-w-full dark:prose-invert prose-img:mx-auto prose-img:my-auto;
+	@apply prose-base prose-zinc max-w-full dark:prose-invert prose-img:mx-auto prose-img:my-auto;
 	@apply prose-headings:font-serif prose-headings:font-semibold;
 	@apply prose-headings:text-black prose-headings:dark:text-white;
 }
@@ -47,7 +47,7 @@ article {
 @layer utilities {
 	article a {
 		@apply font-sans text-current underline underline-offset-[3px];
-		@apply decoration-black/30 dark:decoration-white/30;
+		@apply decoration-black/30 dark:decoration-white/30 decoration-2;
 		@apply transition-colors duration-300 ease-in-out;
 	}
 	article a:hover {
