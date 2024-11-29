@@ -1,0 +1,22 @@
+{
+  "title": "Priyanshu Sinha",
+  "url": "https://priyanshusinha.in/",
+  "preview": "https://priyanshusinha.in/og.png",
+  "language": "en",
+  "description": "The website and blog of Priyanshu Sinha",
+  "feed": {
+    "subtitle": "The website and blog of Priyanshu Sinha",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://priyanshusinha.in/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://priyanshusinha.in/feed/feed.json"
+  },
+  "author": {
+    "name": "Priyanshu Sinha",
+    "email": "priyanshusinha.dtu@gmail.com",
+    "url": "priyanshusinha.in"
+  }
+}
