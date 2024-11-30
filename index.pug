@@ -34,13 +34,13 @@ eleventyExcludeFromCollections: true
     //-                         p(class="text-gray-500 dark:text-zinc-400 font-sans whitespace-nowrap text-sm")= filters.readableDate(post.date).split(' ').slice(0, ).join(' ')
 
 
-    div
+    div(class="divide-y divide-dashed divide-zinc-800")
         each post in collections.posts.reverse()
-            a(href=post.url, class="grid group border-b border-zinc-800 border-dashed py-4")
+            a(href=post.url, class="grid gap-1 group py-4")
                 div(class="flex flex-row justify-between text-rose-300")
                     p(class="whitespace-nowrap")= filters.readableDate(post.date).split(' ').slice(0, ).join(' ')
                     div(class="flex items-center")
                         p Read more
                         include /icons/link-arrow.svg
-                h3(class="leading-tight text-xl font-semibold text-[#ffe6d9] my-1 group-hover:text-white transition-colors") #{post.data.title}
+                h3(class="leading-tight text-xl font-semibold text-[#ffe6d9] group-hover:text-white transition-colors") #{post.data.title}
                 p(class="text-white/70")= post.data.subtitle
