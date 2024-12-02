@@ -5,8 +5,6 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: "-apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif",
-      title:
-        "new-spirit-condensed, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif",
       serif: ["Tiempos", ...defaultTheme.fontFamily.serif],
       mono: "input-mono-condensed, Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace",
     },
@@ -18,7 +16,7 @@ module.exports = {
         },
       },
       animation: {
-        'fade-in': "fade-in 200ms cubic-bezier(0.16, 0, 0.13, 1)",
+        'fade-in': "fade-in 300ms cubic-bezier(0.16, 0, 0.13, 1)",
       },
     },
   },

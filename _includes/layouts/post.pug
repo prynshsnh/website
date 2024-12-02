@@ -2,11 +2,11 @@
 layout: layouts/page
 ---
 
-p(class="mt-4 text-zinc-500")
+p(class="mt-4 text-zinc-400")
     = filters.readableDate(date)
 article(class="animate-fade-in")
     h1(class="text-4xl mt-12 font-medium whitespace-pre-line")= title
-    h2(class="text-lg mt-2 text-gray-600 dark:text-zinc-300")= subtitle
+    h2(class="text-lg mt-2 text-zinc-300")= subtitle
     div(class="mt-12 markdown")
         | !{content}
 //- div(class="border-t mt-12 pt-16 dark:bg-zinc-900")
