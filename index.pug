@@ -33,7 +33,7 @@ eleventyExcludeFromCollections: true
     //-                         p(class="text-gray-500 dark:text-zinc-400")= post.data.subtitle
     //-                         p(class="text-gray-500 dark:text-zinc-400 font-sans whitespace-nowrap text-sm")= filters.readableDate(post.date).split(' ').slice(0, ).join(' ')
 
-    h2(class="py-2 px-3 border border-dashed border-zinc-800/80 bg-zinc-900 italic text-white/60 font-medium") Posts and other half-baked thoughts
+    h2(class="py-2 px-3 border border-dashed border-zinc-700 bg-zinc-900 italic text-white/60 font-medium") Posts and other half-baked thoughts
     div(class="divide-y divide-dashed divide-zinc-700 mt-4")
         each post in collections.posts.reverse()
             a(href=post.url, class="grid gap-1 group py-4")
