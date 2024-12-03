@@ -33,8 +33,8 @@ eleventyExcludeFromCollections: true
     //-                         p(class="text-gray-500 dark:text-zinc-400")= post.data.subtitle
     //-                         p(class="text-gray-500 dark:text-zinc-400 font-sans whitespace-nowrap text-sm")= filters.readableDate(post.date).split(' ').slice(0, ).join(' ')
 
-    h2(class="py-2 px-3 border border-dashed border-zinc-800/80 bg-zinc-950 italic text-white/60 font-medium") Posts and other half-baked thoughts
-    div(class="divide-y divide-dashed divide-neutral-700 mt-4")
+    h2(class="py-2 px-3 border border-dashed border-zinc-800/80 bg-zinc-900 italic text-white/60 font-medium") Posts and other half-baked thoughts
+    div(class="divide-y divide-dashed divide-zinc-700 mt-4")
         each post in collections.posts.reverse()
             a(href=post.url, class="grid gap-1 group py-4")
                 div(class="flex flex-row justify-between text-sky-200")
@@ -42,8 +42,8 @@ eleventyExcludeFromCollections: true
                     div(class="flex items-center")
                         p Read more
                         include /icons/link-arrow.svg
-                h3(class="leading-tight text-xl font-semibold text-stone-200 group-hover:text-white transition-colors") #{post.data.title}
+                h3(class="leading-tight text-xl font-semibold text-stone-200 group-hover:text-white transition-colors ease-in-out duration-300") #{post.data.title}
                 p(class="text-white/70")= post.data.subtitle
-    div(class="block md:hidden")
-        include /social
+    //- div(class="block md:hidden")
+    //-     include /social
     include /footer
