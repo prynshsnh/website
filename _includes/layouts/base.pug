@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(lang="en" class="scroll-smooth")
     head
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
@@ -30,5 +30,5 @@ html(lang="en")
         link(rel="preload" as="font" type="font/woff2" href="/fonts/test-tiempos-text-regular.woff2" crossorigin="anonymous")
         link(rel="preload" as="font" type="font/woff2" href="/fonts/test-tiempos-text-semibold.woff2" crossorigin="anonymous")
 
-    body(class="bg-zinc-800 text-white font-serif")
+    body(class="max-w-screen-lg mx-auto bg-[#121212] text-white font-sans")
         | !{ content }

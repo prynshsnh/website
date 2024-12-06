@@ -3,47 +3,16 @@ layout: layouts/page
 eleventyExcludeFromCollections: true
 ---
 
-.animate-fade-in
-    //- section(class="mb-8 max-w-lg grid gap-4")
-    //-     h1(class="text-4xl font-medium font-title dark:text-white")
-    //-         | I study CS and public policy at UC&nbsp;Berkeley and work as a founding engineer at #[a(href="https://cartesia.ai") Cartesia].
-    //-     p I’m passionate about tools that make it fun and easy to build tools and calm technology that gets out of our way.
-    //-     p I like compilers, the web, and good design.
-
-    //- include /subscribe
-    //- p(class="mt-1.5 text-xs text-gray-500 dark:text-zinc-400") Or follow on #[a(href="https://twitter.com/KabirGoel" class="border-b") Twitter]
-    //- section(class="mt-12")
-    //-     h2(class="flex items-center space-x-4 mb-4")
-    //-         span(class="font-semibold") Recently
-    //-         span(class="border-t flex-1")
-    //-     div(class="text-gray-600 dark:text-gray-300 markdown")
-    //-         p I recently started as a founding engineer at #[a(href="https://cartesia.ai"  class="text-blue-800 dark:text-blue-300") Cartesia], where I work across product and infrastructure to serve next-gen experiences powered by subquadratic models.
-    //-         p Before joining Cartesia, I was an AI/UX engineer at #[a(href="https://symbolic.ai" class="text-blue-800 dark:text-blue-300") Symbolic], where I built AI tools for journalists.
-    //- div(class="space-y-12")
-    //-     each yearWithPosts in collections.postsByYear.slice().reverse()
-    //-         - const [year, yearPosts] = yearWithPosts
-    //-         section
-    //-             h2(class="flex items-center space-x-4 mb-8")
-    //-                 span(class="font-semibold")= year
-    //-                 span(class="border-t flex-1")
-    //-             div(class="grid gap-6 max-w-screen-sm")
-    //-                 each post in yearPosts.slice().reverse()
-    //-                     a(href=post.url, class="grid group gap-1")
-    //-                         h3(class="leading-tight text-lg font-semibold text-blue-800 dark:text-blue-300 group-hover:text-amber-500 dark:group-hover:text-yellow-500 transition-colors") #{post.data.title}
-    //-                         p(class="text-gray-500 dark:text-zinc-400")= post.data.subtitle
-    //-                         p(class="text-gray-500 dark:text-zinc-400 font-sans whitespace-nowrap text-sm")= filters.readableDate(post.date).split(' ').slice(0, ).join(' ')
-
-    h2(class="py-2 px-3 border border-dashed border-zinc-700 bg-zinc-900 italic text-white/60 font-medium") Posts and other half-baked thoughts
-    div(class="divide-y divide-dashed divide-zinc-700 mt-4")
+div(class="animate-fade-in")
+    h2(class="text-stone-400 font-medium") Posts and other half-baked thoughts
+    div(class="mt-4")
         each post in collections.posts.reverse()
             a(href=post.url, class="grid gap-1 group py-4")
-                div(class="flex flex-row justify-between text-sky-200")
-                    p(class="whitespace-nowrap")= filters.readableDate(post.date).split(' ').slice(0, ).join(' ')
-                    div(class="flex items-center")
+                div(class="flex flex-row justify-between text-sm")
+                    p(class="whitespace-nowrap text-stone-400")= filters.readableDate(post.date).split(' ').slice(0, ).join(' ')
+                    div(class="flex items-center opacity-0 group-hover:opacity-100 group-hover:pr-0 pr-4 transition-all ease-in-out duration-300")
                         p Read more
                         include /icons/link-arrow.svg
-                h3(class="leading-tight text-xl font-semibold text-stone-200 group-hover:text-white transition-colors ease-in-out duration-300") #{post.data.title}
-                p(class="text-white/70")= post.data.subtitle
-    //- div(class="block md:hidden")
-    //-     include /social
+                h3(class="leading-tight text-lg font-medium text-[#3b82f6] group-hover:text-white transition-colors ease-in-out duration-300") #{post.data.title}
+                p(class="text-stone-400")= post.data.subtitle
     include /footer

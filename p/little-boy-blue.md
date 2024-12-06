@@ -1,6 +1,6 @@
 ---
 title: The story of Little Boy Blue
-subtitle: How and why I built a Slack bot to foster community in a Berkeley student org
+subtitle: How and why I built a Slack bot to foster community in a Berkeley student organisation
 date: 2023-07-14
 preview: https://static.kabirgoel.com/little-boy-blue/cover.png
 ---
