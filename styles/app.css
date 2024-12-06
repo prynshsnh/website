@@ -9,10 +9,6 @@
 }
 
 @layer components {
-    .container {
-        @apply max-w-screen-2xl;
-    }
-
     .markdown {
         @apply prose leading-relaxed text-zinc-200 prose-video:rounded-md prose-img:rounded-md prose-blockquote:not-italic 
             prose-a:decoration-2 prose-a:underline-offset-2 prose-a:decoration-zinc-600 prose-a:text-blue-300
@@ -28,7 +24,7 @@
     }
 
     .markdown summary::marker {
-        @apply text-zinc-500;
+        @apply text-stone-300;
     }
 
     .markdown details[open] {
