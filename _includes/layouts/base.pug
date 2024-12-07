@@ -39,6 +39,9 @@ html(lang="en" class="scroll-smooth")
         link(rel="preload" as="font" type="font/woff2" href="/fonts/suisse/SuisseIntl-Medium.woff2" crossorigin="anonymous")
         link(rel="preload" as="font" type="font/woff2" href="/fonts/suisse/SuisseIntl-SemiBold.woff2" crossorigin="anonymous")
 
+        script(type='application/ld+json').
+            {"@context": "https://schema.org/","@type": "WebSite","name": "Priyanshu Sinha","url": "https://priyanshusinha.in/","image": "https://priyanshusinha.in/photo.jpg"}
+
     body(class="bg-[#141414] text-white font-sans antialiased")
         | !{ content }
         script(src="https://unpkg.com/swup@4")
