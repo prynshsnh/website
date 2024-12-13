@@ -25,13 +25,13 @@
 
 @layer components {
     .markdown {
-        @apply prose leading-relaxed text-zinc-200 prose-video:rounded-md prose-img:rounded-md prose-blockquote:not-italic 
-            prose-a:decoration-2 prose-a:underline-offset-2 prose-a:decoration-zinc-600 prose-a:text-[#81D8D0]
-            hover:prose-a:text-cyan-400 prose-a:transition-colors
+        @apply prose prose-stone leading-relaxed prose-video:rounded-md prose-img:rounded-md prose-blockquote:not-italic 
+            prose-a:decoration-2 prose-a:underline-offset-2 prose-a:decoration-zinc-300 prose-a:text-blue-900
+            hover:prose-a:text-blue-600 prose-a:transition-colors
             prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-h4:text-lg
             prose-code:font-normal prose-code:before:content-none prose-code:after:content-none
-            prose-pre:border prose-pre:rounded-none prose-pre:shadow-sm prose-hr:border-zinc-700
-            prose-headings:text-white prose-tr:border-zinc-700 prose-thead:border-zinc-700
+            prose-pre:border prose-pre:rounded-none prose-pre:shadow-sm prose-hr:border-stone-400
+            /* prose-headings:text-white prose-tr:border-zinc-700 prose-thead:border-zinc-700 */
     }
 
     .markdown summary {
@@ -47,40 +47,48 @@
     }
 
 	.social {
-		@apply rounded-lg bg-stone-950 border p-2 border-stone-800 hover:bg-stone-800 transition-colors duration-300 ease-in-out mx-auto
+		@apply rounded-lg border p-2 border-stone-200 hover:bg-stone-200 transition-colors duration-300 ease-in-out mx-auto
 	}
 }
 
 @layer base {
 	@font-face {
-		font-family: "Suisse";
+		font-family: "Tiempos";
 		font-style: normal;
 		font-weight: 400;
 		font-display: swap;
-		src: url(/fonts/suisse/SuisseIntl-Regular.woff2) format("woff2");
+		src: url(/fonts/tiempos/test-tiempos-text-regular.woff2) format("woff2");
+	}
+
+    @font-face {
+		font-family: "Tiempos";
+		font-style: italic;
+		font-weight: 400;
+		font-display: swap;
+		src: url(/fonts/tiempos/test-tiempos-text-regular-italic.woff2) format("woff2");
 	}
 
 	@font-face {
-		font-family: "Suisse";
+		font-family: "Tiempos";
 		font-style: normal;
 		font-weight: 500;
 		font-display: swap;
-		src: url(/fonts/suisse/SuisseIntl-Medium.woff2) format("woff2");
+		src: url(/fonts/tiempos/test-tiempos-text-medium.woff2) format("woff2");
 	}
 
 	@font-face {
-		font-family: "Suisse";
+		font-family: "Tiempos";
 		font-style: normal;
 		font-weight: 600;
 		font-display: swap;
-		src: url(/fonts/suisse/SuisseIntl-SemiBold.woff2) format("woff2");
+		src: url(/fonts/tiempos/test-tiempos-text-semibold.woff2) format("woff2");
 	}
 
 	@font-face {
-		font-family: "Suisse";
+		font-family: "Tiempos";
 		font-style: normal;
 		font-weight: 700;
 		font-display: swap;
-		src: url(/fonts/suisse/SuisseIntl-Bold.woff2) format("woff2");
+		src: url(/fonts/tiempos/test-tiempos-text-bold.woff2) format("woff2");
 	}
 }

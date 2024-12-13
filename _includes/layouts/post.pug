@@ -2,11 +2,11 @@
 layout: layouts/page
 ---
 
-p(class="text-white/60")
+p(class="text-black/60")
     = filters.readableDate(date)
 article(class="animate-fade-in")
     h1(class="text-4xl mt-8 font-bold whitespace-pre-line")= title
-    h2(class="text-lg mt-2 text-zinc-300")= subtitle
+    h2(class="text-lg mt-2 text-zinc-500")= subtitle
     div(class="mt-12 markdown")
         | !{content}
 include /footer
