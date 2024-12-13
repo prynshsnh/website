@@ -10,7 +10,7 @@
 	html,
     body {
         scrollbar-gutter: stable;
-        scrollbar-color: #434343 transparent;
+        scrollbar-color: #bababa transparent;
     }
 
     html.is-changing .transition-fade {
