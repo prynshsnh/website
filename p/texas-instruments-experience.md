@@ -1,5 +1,5 @@
 ---
-title: Texas Instruments Internship Review
+title: Texas Instruments Internship Experience
 subtitle: My journey from start to a new start.
 date: 2024-12-13
 ---
