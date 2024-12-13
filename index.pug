@@ -3,7 +3,7 @@ layout: layouts/page
 eleventyExcludeFromCollections: true
 ---
 
-h2(class="text-stone-500 font-semibold") Posts and other half-baked thoughts
+h2(class="text-stone-600 font-semibold") Posts and other half-baked thoughts
 div(class="mt-4")
     each post in collections.posts.reverse()
         a(href=post.url, class="grid gap-1 group py-4")
