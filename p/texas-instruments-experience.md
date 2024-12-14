@@ -4,6 +4,8 @@ subtitle: My journey from start to a new start.
 date: 2024-12-13
 ---
 
+<img src="/static/ti.jpeg" alt="Priyanshu Sinha at Texas Instruments office, Bangalore" />
+
 My internship journey started with a rigorous selection process, including an online assessment, which led to me being shortlisted for interviews in both the analog and digital domains. After successfully navigating the rounds, I secured a position as an analog intern in what was a core engineering role.
 
 As a part of TI’s eFuses and high-side switches design team, my project involved designing a new IP (Intellectual Property) for wire harness protection using the I2T algorithm for TI's high-side switches product line. While most of the project work for interns around me was in the form of well-defined tasks, I had to morph an abstract idea into a fabricable IC completely.
