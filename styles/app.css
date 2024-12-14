@@ -47,7 +47,7 @@
     }
 
 	.social {
-		@apply rounded-lg border p-2 border-stone-200 hover:bg-stone-200 transition-colors duration-300 ease-in-out mx-auto
+		@apply flex items-center gap-1.5 hover:underline underline-offset-2 transition-colors duration-300 ease-in-out
 	}
 }
 
