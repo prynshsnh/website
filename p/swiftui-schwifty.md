@@ -3,6 +3,7 @@ title: "SwiftUI Needs to Get Schwifty"
 subtitle: The state of SwiftUI development in 2022. (It's not great.)
 date: 2022-04-03
 preview: https://kabirgoel.com/static/schwifty.png
+hidden: true
 ---
 
 <figure>

@@ -3,6 +3,7 @@ title: Analyzing dependencies of JavaScript snippets
 subtitle: Where I befriend Babel to parse out identifiers referenced in code.
 date: 2023-05-28
 preview: https://kabirgoel.com/static/parse-deps.png
+hidden: true
 ---
 
 I’m working on a way to build apps using a spreadsheet-like system called Smoothie. In place of formulas, Smoothie allows you to write arbitrary JavaScript snippets that can reference other cells.

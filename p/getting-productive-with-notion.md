@@ -2,6 +2,7 @@
 title: Getting Productive with Notion
 subtitle: Advice from Cal Newport’s “How to Become a Straight-A Student”
 date: 2021-01-27
+hidden: true
 ---
 
 <figure>

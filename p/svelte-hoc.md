@@ -2,6 +2,7 @@
 title: Higher-order components in Svelte
 subtitle: Emulating the React function-as-child pattern.
 date: 2022-07-17
+hidden: true
 ---
 
 How do you do higher order components in Svelte?
