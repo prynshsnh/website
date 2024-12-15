@@ -3,9 +3,9 @@
   "url": "https://priyanshusinha.in/",
   "preview": "https://priyanshusinha.in/og.png",
   "language": "en",
-  "description": "The website and blog of Priyanshu Sinha",
+  "description": "Priyanshu Sinha is a senior at DTU studying electronics and economics, analog VLSI enthusiast, Vice Captain of Team Raftaar, F1 fan, movie buff, and pop culture geek.",
   "feed": {
-    "subtitle": "The website and blog of Priyanshu Sinha",
+    "subtitle": "Priyanshu Sinha is a senior at DTU studying electronics and economics, analog VLSI enthusiast, Vice Captain of Team Raftaar, F1 fan, movie buff, and pop culture geek.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "id": "https://priyanshusinha.in/"
