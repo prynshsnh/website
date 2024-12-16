@@ -1,6 +1,6 @@
 ---
 title: Texas Instruments Internship Experience
-subtitle: My journey from start to a new start.
+subtitle: From theory to practice, my time as a summer intern at Texas Instruments.
 date: 2024-12-13
 ---
 
