@@ -1,7 +1,7 @@
 import defaultTheme from "tailwindcss/defaultTheme";
 
 module.exports = {
-  content: ["./_includes/**/*.pug", "./_includes/**/*.svg", "./*.pug"],
+  content: ["./_includes/**/*.pug", "./_includes/**/*.svg", "./*.pug", "./*.njk"],
   theme: {
     fontFamily: {
       sans: "-apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif",
