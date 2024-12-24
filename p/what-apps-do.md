@@ -1,6 +1,7 @@
 ---
 title: What apps do
 subtitle: A framework for thinking about apps.
+slug: what-apps-do
 date: 2023-06-13
 ---
 

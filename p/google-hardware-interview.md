@@ -1,6 +1,7 @@
 ---
 title: My Google Hardware Interview Experience
 subtitle: Insights and takeaways from my interview journey for the Silicon Engineer role.
+slug: google-hardware-interview
 date: 2024-12-16
 ---
 

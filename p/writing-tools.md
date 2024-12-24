@@ -1,6 +1,7 @@
 ---
 title: What I Want from My Writing Tools
 subtitle: A wishlist of features.
+slug: writing-tools
 date: 2022-07-16
 ---
 
