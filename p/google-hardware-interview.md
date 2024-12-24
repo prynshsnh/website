@@ -42,6 +42,6 @@ The **third round** began with the interviewer exploring my internship work in m
 We also discussed the job profile in more depth, and the interviewer shared insights about the various departments and projects at Google India, including work on Tensor chips. The interview ended on a positive note, with both of us feeling satisfied with my responses.
 
 #### Results
-I wasn’t selected, as Google hired only one candidate, who turned out to be my friend and co-intern at Texas Instruments. While I wasn’t chosen, I was happy for him and felt self-assured knowing I was one of the few who made it through each round. This experience inspired me to write this post, hoping that others might benefit from my three hours of effort and, in turn, secure the role.
+I wasn’t selected, also Google hired only one candidate, who turned out to be my friend and co-intern at Texas Instruments. While I wasn’t chosen, I was happy for him and felt self-assured knowing I was one of the few who made it through each round. This experience inspired me to write this post, hoping that others might benefit from my three hours of effort and, in turn, secure the role.
 
 Thank you for reading this far! I’m planning to write another post featuring all the resources I followed and recommend, so be sure to check back soon.
