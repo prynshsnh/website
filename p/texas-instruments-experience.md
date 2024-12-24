@@ -1,6 +1,6 @@
 ---
 title: Texas Instruments Internship Experience
-subtitle: From theory to practice, my time as a summer intern at Texas Instruments.
+subtitle: From theory to practice, my summer internship at Texas Instruments India.
 slug: texas-instruments-experience
 date: 2024-12-13
 ---
