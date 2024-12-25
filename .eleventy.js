@@ -12,6 +12,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight)
   eleventyConfig.addPlugin(pluginRss)
 
+  eleventyConfig.addUrlTransform((page) => {
+		if (page.url.length !== "/" && page.url.endsWith("/")) {
+			return page.url.slice(0, -1);
+		}
+	});
+
   eleventyConfig.addPassthroughCopy({
     public: "./",
   })
