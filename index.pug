@@ -3,11 +3,11 @@ layout: layouts/page
 eleventyExcludeFromCollections: true
 ---
 
-div(class="block md:hidden space-y-6 mb-6")
-    p(class="text-zinc-600") I'm a senior at DTU, studying electronics and economics. I like to watch movies, follow F1, read books and occasionally write posts.
+div(class="block md:hidden space-y-8 mb-8")
+    p(class="font-serif italic") I'm a senior at DTU, studying electronics and economics. I like to watch movies, follow F1, read books and occasionally write posts.
     include /favorites
     include /social
-h2(class="text-zinc-600 font-medium") Posts / Notes
+h2(class="text-lg font-medium font-serif") Posts / Notes
 div(class="mt-4")
     each post in collections.posts.reverse()
         a(href=post.url, class="grid gap-1 group py-4")
@@ -16,6 +16,6 @@ div(class="mt-4")
                 div(class="flex items-center opacity-0 group-hover:opacity-100 group-hover:pr-0 pr-4 transition-all ease-in-out duration-300")
                     p Read more
                     include /icons/link-arrow.svg
-            h3(class="leading-tight text-xl font-medium text-blue-900 group-hover:text-blue-950 transition-colors ease-in-out duration-300") #{post.data.title}
+            h3(class="leading-tight text-xl font-semibold text-blue-900 group-hover:text-blue-950 transition-colors ease-in-out duration-300") #{post.data.title}
             p(class="text-zinc-500")= post.data.subtitle
 include /footer

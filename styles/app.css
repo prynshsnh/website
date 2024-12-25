@@ -31,7 +31,7 @@
             prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-h4:text-lg
             prose-code:font-normal prose-code:before:content-none prose-code:after:content-none
             prose-pre:border prose-pre:rounded-none prose-pre:shadow-sm prose-hr:border-zinc-200
-            prose-headings:text-zinc-800 prose-tr:border-zinc-200 prose-thead:border-zinc-200
+            prose-headings:text-zinc-800 prose-headings:font-serif prose-tr:border-zinc-200 prose-thead:border-zinc-200
     }
 
     .markdown summary {
@@ -82,5 +82,21 @@
 		font-weight: 700;
 		font-display: swap;
 		src: url(/fonts/suisse/SuisseIntl-Bold.woff2) format("woff2");
+	}
+    
+	@font-face {
+		font-family: "Tiempos";
+		font-style: normal;
+		font-weight: 500;
+		font-display: swap;
+		src: url(/fonts/tiempos/test-tiempos-text-medium.woff2) format("woff2");
+	}
+
+	@font-face {
+		font-family: "Tiempos";
+		font-style: normal;
+		font-weight: 600;
+		font-display: swap;
+		src: url(/fonts/tiempos/test-tiempos-text-semibold.woff2) format("woff2");
 	}
 }
