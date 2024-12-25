@@ -49,6 +49,10 @@
 	.social {
 		@apply flex items-center gap-1.5 hover:underline underline-offset-2 transition-colors duration-300 ease-in-out
 	}
+
+	.card {
+		@apply flex flex-col gap-1.5 rounded-md py-2 px-3
+	}
 }
 
 @layer base {
