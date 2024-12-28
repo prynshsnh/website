@@ -2,7 +2,7 @@
 title: Texas Instruments Internship Experience
 subtitle: From theory to practice, my summer internship at Texas Instruments India.
 slug: texas-instruments-experience
-date: 2024-12-13
+date: 2024-12-06
 ---
 
 <img src="/static/ti.jpeg" alt="Priyanshu Sinha at Texas Instruments office, Bangalore" />
