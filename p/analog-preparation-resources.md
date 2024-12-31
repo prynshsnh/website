@@ -1,6 +1,7 @@
 ---
 title: Resources to prepare for Analog Internships / Placements
 subtitle: An exhaustive list of all high-quality books, website, online courses and YT channels.
+slug: analog-preparation-resources
 date: 2024-12-28
 ---
 
