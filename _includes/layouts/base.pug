@@ -40,8 +40,36 @@ html(lang="en" class="scroll-smooth")
         link(rel="preload" as="font" type="font/woff2" href="/fonts/tiempos/test-tiempos-text-medium.woff2" crossorigin="anonymous")
         link(rel="preload" as="font" type="font/woff2" href="/fonts/suisse/SuisseIntl-SemiBold.woff2" crossorigin="anonymous")
 
-        script(type='application/ld+json').
-            {"@context": "https://schema.org/","@type": "WebSite","name": "Priyanshu Sinha","url": "https://priyanshusinha.in/","image": "https://priyanshusinha.in/photo.jpg"}
+        if title === "About - Priyanshu Sinha"
+            script(type='application/ld+json').
+                {
+                "@context": "https://schema.org/",
+                "@type": "Person",
+                "name": "Priyanshu Sinha",
+                "url": "https://priyanshusinha.in",
+                "image": "https://priyanshusinha.in/photo.jpg",
+                "jobTitle": "Analog Engineer",
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "Texas Instruments"
+                },
+                "sameAs": [
+                    "https://x.com/PriyanshuSinhaX",
+                    "https://www.linkedin.com/in/priyanshusinha7/",
+                    "https://bsky.app/profile/priyanshusinha.in",
+                    "https://mastodon.social/@priyanshusinha",
+                    "https://letterboxd.com/priyanshusinha/",
+                    "https://read.cv/priyanshusinha",
+                    "https://www.youtube.com/@PriyanshuSinhaYT",
+                    "https://priyanshusinha.in/",
+                    "https://scholar.google.com/citations?user=NjDqj8MAAAAJ&hl=en",
+                    "https://in.pinterest.com/priyanshusinha7/",
+                    "https://www.instagram.com/_priyanshusinha/"
+                ]
+                }
+        else    
+            script(type='application/ld+json').
+                {"@context": "https://schema.org/","@type": "WebSite","name": "Priyanshu Sinha","url": "https://priyanshusinha.in/","image": "https://priyanshusinha.in/photo.jpg"}
 
     body(class="antialiased")
         | !{ content }
