@@ -5,6 +5,14 @@ nav(class="shrink-0")
                 img(src="/photo.jpg", alt="Photo of Priyanshu Sinha", class="rounded-full h-10 w-10", title="Priyanshu Sinha")
                 h1(class="text-xl font-semibold") Priyanshu Sinha
             div(class="hidden md:block space-y-6")
-                p(class="font-serif italic") I'm a senior at DTU, studying electronics and economics. I like to watch movies, follow F1, read books and occasionally write posts.
+                ul(class="space-y-4")
+                    li
+                        p(class="font-serif italic") I'm a senior at DTU, studying electronics and economics. I like to watch movies, follow F1, read books and occasionally write posts.
+                    li(class="flex items-center text-zinc-600")
+                        a(href="/about" class="link") More about me
+                        include /icons/link-arrow.svg
+                    li(class="flex items-center text-zinc-600")
+                        a(href="/now" class="link") What am I doing now?
+                        include /icons/link-arrow.svg
                 include /favorites
                 include /social

@@ -53,6 +53,11 @@
 	.card {
 		@apply flex flex-col gap-1.5 rounded-md py-2 px-3
 	}
+
+	.link {
+		@apply font-medium text-blue-900 font-serif underline decoration-2 underline-offset-2 decoration-zinc-200 hover:decoration-amber-400
+		transition-colors duration-300 ease-in-out
+	}
 }
 
 @layer base {
