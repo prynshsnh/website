@@ -15,7 +15,7 @@ const fetchLetterboxd = async (duration) => {
 };
 
 const fetchRecentMovies = async () => {
-  const response = await fetchLetterboxd("1d");
+  const response = await fetchLetterboxd("1h");
 
   if (!response) {
     return [];
