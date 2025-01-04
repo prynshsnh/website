@@ -28,7 +28,7 @@ const fetchLastFm = async (method, duration, extraArgs) => {
 const fetchTopTracks = async (period = "7day") => {
   const response = await fetchLastFm(
     "user.gettoptracks",
-    "5m",
+    "10s",
     `period=${period}`,
   );
 
