@@ -25,9 +25,9 @@ const fetchLastFm = async (method, duration, extraArgs) => {
   }
 };
 
-const fetchTopTracks = async (period = "7day") => {
+const fetchRecentAlbums = async (period = "7day") => {
   const response = await fetchLastFm(
-    "user.gettoptracks",
+    "user.gettopalbums",
     "0s",
     `period=${period}`,
   );
@@ -36,22 +36,25 @@ const fetchTopTracks = async (period = "7day") => {
     return [];
   }
 
-  const tracks = response.toptracks.track.slice(0, 6);
+  const albums = response.topalbums.album.slice(0, 6);
 
-  const topTracks = tracks.map((track) => {
-    const extraLargeImage = track.image.find(
+  const recentAlbums = albums.map((album) => {
+    const extraLargeImage = album.image.find(
       (img) => img.size === "extralarge",
     );
-    const imgUrl = extraLargeImage["#text"];
+    const imageUrl = extraLargeImage ? extraLargeImage["#text"] : "";
     return {
-      artist: track.artist.name,
-      track: track.name,
-      url: track.url,
-      imgUrl,
+      artist: album.artist.name,
+      artistMbid: album.artist.mbid,
+      album: album.name,
+      albumMbid: album.mbid,
+      playcount: album.playcount,
+      url: album.url,
+      imageUrl,
     };
   });
 
-  return topTracks;
+  return recentAlbums;
 };
 
 const fetchRecentTracks = async () => {
@@ -81,10 +84,10 @@ const fetchRecentTracks = async () => {
 
 module.exports = async function () {
   const recentTracks = await fetchRecentTracks();
-  const topTracks = await fetchTopTracks();
+  const recentAlbums = await fetchRecentAlbums();
 
   return {
     recentTracks,
-    topTracks,
+    recentAlbums,
   };
 };
