@@ -6,13 +6,16 @@ title: Now - Priyanshu Sinha
 h2(class="text-3xl font-serif font-semibold") Now
 div(class="mt-6 space-y-6")
     h3(class="text-2xl font-semibold") 🍿 Watching
-    h4(class="text-zinc-700") The last 8 movies that I’ve watched and (hopefully) enjoyed, I record the ratings with
+    h4(class="text-zinc-700") The last 6 movies that I’ve watched and (hopefully) enjoyed, I record the ratings with
     a(href="https://letterboxd.com/priyanshusinha/" target="_blank" class="text-blue-900 hover:underline underline-offset-2") Letterboxd
     | .
-    div(class="grid grid-cols-2 md:grid-cols-4 gap-x-7 gap-y-10")
+    div(class="grid grid-cols-1 md:grid-cols-2 gap-10")
         each movie in letterboxd
-            a(href=movie.url target="_blank" class="flex flex-col space-y-2 group")
-                img(src=movie.imgSrc class="group-hover:brightness-75 transition-[filter] duration-300 ease-in-out")
-                h3(class="leading-tight font-serif font-semibold text-blue-900") #{movie.title}
-                p(class="text-sm text-zinc-500")= `Rating: ${filters.starRating(movie.rating)}`
+            a(href=movie.url target="_blank" class="flex gap-2.5 group items-center")
+                img(src=movie.imgSrc class="h-36 group-hover:brightness-75 transition-[filter] duration-300 ease-in-out")
+                div(class="flex flex-col gap-1.5 text-sm text-zinc-600")
+                    h3(class="leading-tight text-base font-serif font-semibold text-blue-900") #{movie.title}
+                    p= `Release Year: ${movie.year}`
+                    p= `🗓: ${filters.readableDate(new Date(movie.watchedDate))}`
+                    p= `Rating: ${filters.starRating(movie.rating)}`
 include /footer

@@ -27,7 +27,7 @@ const fetchRecentMovies = async () => {
 
   $("channel")
     .children("item")
-    .slice(0, 8)
+    .slice(0, 6)
     .each((_, element) => {
       const title = $(element).children("letterboxd\\:filmTitle").text();
 
@@ -35,16 +35,24 @@ const fetchRecentMovies = async () => {
         return false;
       }
 
+      const watchedDate = $(element)
+        .children("letterboxd\\:watchedDate")
+        .text();
+      const year = $(element).children("letterboxd\\:filmYear").text();
       const img = $(element).children("description").text();
       const imgSrc = $(img).children("img").attr("src");
       const url = $(element).children("link").text();
+      const rewatch = $(element).children("letterboxd\\:rewatch").text();
       const rating = $(element).children("letterboxd\\:memberRating").text();
 
       recentMovies.push({
         imgSrc,
+        isRewatch: rewatch === "Yes",
         rating,
         title,
         url,
+        watchedDate,
+        year,
       });
     });
 
