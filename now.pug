@@ -4,18 +4,39 @@ eleventyExcludeFromCollections: true
 title: Now - Priyanshu Sinha
 ---
 h2(class="text-3xl font-serif font-semibold") Now
-div(class="mt-6 space-y-6")
-    h3(class="text-2xl font-semibold") 🍿 Watching
-    h4(class="text-zinc-700") The last 6 movies that I’ve watched and (hopefully) enjoyed, I record the ratings with
-    a(href="https://letterboxd.com/priyanshusinha/" target="_blank" class="text-blue-900 hover:underline underline-offset-2") Letterboxd
-    | .
-    div(class="grid grid-cols-1 md:grid-cols-2 gap-10")
-        each movie in letterboxd
-            a(href=movie.url target="_blank" class="flex gap-2.5 group items-center")
-                img(src=movie.imgSrc class="h-36 group-hover:brightness-75 transition-[filter] duration-300 ease-in-out")
-                div(class="flex flex-col gap-1.5 text-sm text-zinc-600")
-                    h3(class="leading-tight text-base font-serif font-semibold text-blue-900") #{movie.title}
-                    p= `Release Year: ${movie.year}`
-                    p= `🗓: ${filters.readableDate(new Date(movie.watchedDate))}`
-                    p= `Rating: ${filters.starRating(movie.rating)}`
+p(class="mt-6") What am I doing right now? Everything on here is automatically generated from various data sources.
+div(class="mt-6 space-y-10")
+    - recent =  lastfm.recentTracks[0]
+    div(class="relative group overflow-hidden p-5 rounded-lg text-white")
+        div(class="w-full h-full absolute top-0 left-0 bg-cover bg-center bg-no-repeat group-hover:scale-125 transition-[transform] duration-300 ease-in-out scale-150 pointer-events-none blur-md" style=`background-image: url(${recent.imageUrl})`)
+        div(class="relative w-full h-full z-10 space-y-3 bg-")    
+            h3(class="font-medium text-zinc-100 text-xs") Last played:
+            a(href=recent.url class="flex gap-4 items-center")
+                img(src=recent.imageUrl class="h-16")
+                div(class="flex flex-col")
+                    p(class="text-lg font-semibold")= recent.track
+                    p(class="text-sm text-zinc-100")= recent.artist
+
+    div(class="space-y-6")
+        h3(class="text-2xl mt-8 font-semibold") 💿 Listening
+        h4(class="text-zinc-700") My recently listened-to tracks, fetched from my #[a(href="https://www.last.fm/user/priyanshusinha7"  target="_blank" rel="noopener" class="text-blue-900 hover:underline underline-offset-2") Last.fm] account.
+        div(class="divide-y border rounded-lg overflow-hidden")
+            each track in lastfm.recentTracks
+                a(href=track.url target="_blank" rel="noopener" class="flex p-5 gap-3 items-center hover:bg-zinc-50 transition-color duration-300 ease-in-out")
+                    img(src=track.imageUrl class="h-16")
+                    div(class="flex flex-col gap-1.5 text-zinc-600")
+                        h3(class="leading-tight text-base font-semibold text-black") #{track.track}
+                        p= track.artist
+
+    div(class="space-y-6")
+        h3(class="text-2xl font-semibold") 🍿 Watching
+        h4(class="text-zinc-700") The last 6 movies that I’ve watched and (hopefully) enjoyed, recorded using #[a(href="https://letterboxd.com/priyanshusinha/" target="_blank" rel="noopener" class="text-blue-900 hover:underline underline-offset-2") Letterboxd].
+        div(class="divide-y border rounded-lg overflow-hidden")
+            each movie in letterboxd
+                a(href=movie.url target="_blank" rel="noopener" class="flex p-5 gap-2.5 group items-center hover:bg-zinc-50 transition-color duration-300 ease-in-out")
+                    img(src=movie.imgSrc class="h-28")
+                    div(class="flex flex-col gap-1.5 text-zinc-600")
+                        h3(class="leading-tight text-base font-semibold text-black") #{movie.title}
+                        p= `Release Year: ${movie.year}`
+                        p= `Rating: ${filters.starRating(movie.rating)}`
 include /footer
